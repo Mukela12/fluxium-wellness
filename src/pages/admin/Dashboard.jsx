@@ -374,7 +374,7 @@ function AdminDashboard() {
           <h2 className="text-xl font-semibold text-gray-900">User Distribution</h2>
           <Link 
             to="/admin/users" 
-            className="text-sage-600 hover:text-sage-700 text-sm font-medium flex items-center space-x-1"
+            className="text-primary-600 hover:text-primary-700 text-sm font-medium flex items-center space-x-1"
           >
             <span>Manage users</span>
             <ChevronRightIcon size={16} />
@@ -412,7 +412,7 @@ function AdminDashboard() {
           <h2 className="text-xl font-semibold text-gray-900">System Health</h2>
           <Link 
             to="/admin/monitoring" 
-            className="text-sage-600 hover:text-sage-700 text-sm font-medium flex items-center space-x-1"
+            className="text-primary-600 hover:text-primary-700 text-sm font-medium flex items-center space-x-1"
           >
             <span>View monitoring</span>
             <ChevronRightIcon size={16} />
@@ -457,7 +457,7 @@ function AdminDashboard() {
           <h2 className="text-xl font-semibold text-gray-900">Recent System Activity</h2>
           <Link 
             to="/admin/logs" 
-            className="text-sage-600 hover:text-sage-700 text-sm font-medium flex items-center space-x-1"
+            className="text-primary-600 hover:text-primary-700 text-sm font-medium flex items-center space-x-1"
           >
             <span>View all logs</span>
             <ChevronRightIcon size={16} />

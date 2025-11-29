@@ -190,7 +190,7 @@ function Rewards() {
                 {selectedReward.name}
               </h1>
               <div className="flex items-center space-x-4 text-sm text-gray-600">
-                <span className="bg-sage-100 text-sage-700 px-3 py-1 rounded-full">
+                <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full">
                   {selectedReward.category}
                 </span>
                 <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
@@ -209,8 +209,8 @@ function Rewards() {
                 className="w-full h-64 object-cover rounded-xl"
               />
             ) : (
-              <div className="w-full h-64 bg-gradient-to-br from-sage-100 to-sage-200 rounded-xl flex items-center justify-center">
-                <GiftIcon size={64} className="text-sage-600" />
+              <div className="w-full h-64 bg-gradient-to-br from-primary-100 to-primary-200 rounded-xl flex items-center justify-center">
+                <GiftIcon size={64} className="text-primary-600" />
               </div>
             )}
           </div>
@@ -256,7 +256,7 @@ function Rewards() {
                     href={selectedReward.merchant.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sage-600 hover:text-sage-700 text-sm mt-1 inline-flex items-center space-x-1"
+                    className="text-primary-600 hover:text-primary-700 text-sm mt-1 inline-flex items-center space-x-1"
                   >
                     <span>Visit website</span>
                     <ArrowRightIcon size={14} />
@@ -317,7 +317,7 @@ function Rewards() {
                     handleRedeem(selectedReward);
                   }}
                   disabled={redeeming === (selectedReward._id || selectedReward.id)}
-                  className={`w-full bg-gradient-to-r from-sage-500 to-sage-600 hover:from-sage-600 hover:to-sage-700 text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover:scale-[1.02] transition-all duration-200 flex items-center justify-center space-x-3 ${
+                  className={`w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover:scale-[1.02] transition-all duration-200 flex items-center justify-center space-x-3 ${
                     redeeming === (selectedReward._id || selectedReward.id) ? 'opacity-70 cursor-not-allowed transform-none hover:transform-none' : ''
                   }`}
                 >
@@ -435,8 +435,8 @@ function Rewards() {
                     className="w-full h-48 object-cover rounded-xl"
                   />
                 ) : (
-                  <div className="w-full h-48 bg-gradient-to-br from-sage-100 to-sage-200 rounded-xl flex items-center justify-center">
-                    <GiftIcon size={48} className="text-sage-600" />
+                  <div className="w-full h-48 bg-gradient-to-br from-primary-100 to-primary-200 rounded-xl flex items-center justify-center">
+                    <GiftIcon size={48} className="text-primary-600" />
                   </div>
                 )}
                 
@@ -447,8 +447,8 @@ function Rewards() {
                 </div>
 
                 {/* View Details Icon */}
-                <div className="absolute top-3 left-3 bg-sage-100 bg-opacity-90 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <EyeIcon size={16} className="text-sage-600" />
+                <div className="absolute top-3 left-3 bg-primary-100 bg-opacity-90 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <EyeIcon size={16} className="text-primary-600" />
                 </div>
 
                 {/* Status Badge */}
@@ -526,7 +526,7 @@ function Rewards() {
                         handleRedeem(reward);
                       }}
                       disabled={redeeming === rewardId}
-                      className={`w-full bg-gradient-to-r from-sage-500 to-sage-600 hover:from-sage-600 hover:to-sage-700 text-white font-semibold py-3 px-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover:scale-[1.02] transition-all duration-200 flex items-center justify-center space-x-2 text-sm ${
+                      className={`w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold py-3 px-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover:scale-[1.02] transition-all duration-200 flex items-center justify-center space-x-2 text-sm ${
                         redeeming === rewardId ? 'opacity-70 cursor-not-allowed transform-none hover:transform-none' : ''
                       }`}
                     >
@@ -563,7 +563,7 @@ function Rewards() {
           className="card-glass"
         >
           <div className="flex items-center space-x-3 mb-6">
-            <TrophyIcon size={24} className="text-sage-600" />
+            <TrophyIcon size={24} className="text-primary-600" />
             <h2 className="text-xl font-semibold text-gray-900">
               Recent Redemptions
             </h2>
@@ -576,8 +576,8 @@ function Rewards() {
                 className="flex items-center justify-between p-4 bg-gray-50 rounded-xl"
               >
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-sage-100 rounded-full flex items-center justify-center">
-                    <GiftIcon size={18} className="text-sage-600" />
+                  <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+                    <GiftIcon size={18} className="text-primary-600" />
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">
@@ -603,11 +603,11 @@ function Rewards() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
-        className="card-glass bg-gradient-to-r from-sage-50 to-sage-100"
+        className="card-glass bg-gradient-to-r from-primary-50 to-primary-100"
       >
         <div className="text-center">
-          <div className="w-16 h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <CoinsIcon size={32} className="text-sage-600" />
+          <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <CoinsIcon size={32} className="text-primary-600" />
           </div>
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
             How to Earn More Happy Coins

@@ -7,11 +7,11 @@ import { motion } from 'framer-motion';
  */
 function AuthLayout({ children }) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sage-50 via-white to-sage-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-primary-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       {/* Background Pattern */}
       <div className="absolute inset-0 overflow-hidden">
         <svg
-          className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-sage-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+          className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-primary-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
           aria-hidden="true"
         >
           <defs>
@@ -44,20 +44,20 @@ function AuthLayout({ children }) {
         >
           {/* Logo */}
           <motion.div
-            className="mx-auto w-16 h-16 bg-sage-300 rounded-2xl flex items-center justify-center mb-4"
+            className="mx-auto mb-4"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <span className="text-white font-bold text-2xl">W</span>
+            <img src="/fluxium-logo.svg" alt="Fluxium" className="w-16 h-16 mx-auto" />
           </motion.div>
 
           {/* App Name */}
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            WelldifyAI
+            Fluxium
           </h1>
           <p className="text-gray-600">
-            AI-Powered Workplace Wellness Platform
+            Workplace Wellness Platform
           </p>
         </motion.div>
 
@@ -79,7 +79,7 @@ function AuthLayout({ children }) {
           transition={{ delay: 0.8, duration: 0.5 }}
         >
           <p className="text-sm text-gray-500">
-            Empowering Workplace Wellness Through AI
+            Empowering Workplace Wellness
           </p>
         </motion.div>
       </div>
@@ -87,7 +87,7 @@ function AuthLayout({ children }) {
       {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
-          className="absolute top-1/4 left-1/4 w-2 h-2 bg-sage-300 rounded-full opacity-60"
+          className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary-300 rounded-full opacity-60"
           animate={{
             y: [0, -20, 0],
             opacity: [0.6, 0.3, 0.6],
@@ -99,7 +99,7 @@ function AuthLayout({ children }) {
           }}
         />
         <motion.div
-          className="absolute top-1/3 right-1/3 w-3 h-3 bg-sage-400 rounded-full opacity-40"
+          className="absolute top-1/3 right-1/3 w-3 h-3 bg-primary-400 rounded-full opacity-40"
           animate={{
             y: [0, -30, 0],
             opacity: [0.4, 0.2, 0.4],
@@ -112,7 +112,7 @@ function AuthLayout({ children }) {
           }}
         />
         <motion.div
-          className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-sage-200 rounded-full opacity-50"
+          className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-primary-200 rounded-full opacity-50"
           animate={{
             y: [0, -15, 0],
             opacity: [0.5, 0.25, 0.5],

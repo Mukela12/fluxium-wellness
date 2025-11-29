@@ -327,8 +327,8 @@ function Dashboard() {
             </div>
           ) : (
             <div className="text-center">
-              <div className="w-12 h-12 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <HeartIcon size={20} className="text-sage-600" />
+              <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <HeartIcon size={20} className="text-primary-600" />
               </div>
               <h3 className="font-medium text-gray-900 mb-2">Daily Check-in</h3>
               <p className="text-gray-600 text-sm mb-4">
@@ -339,7 +339,7 @@ function Dashboard() {
               </p>
               <Link 
                 to="/checkin"
-                className="w-full bg-gradient-to-r from-sage-500 to-sage-600 hover:from-sage-600 hover:to-sage-700 text-white font-semibold py-3 px-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover:scale-[1.02] transition-all duration-200 inline-flex items-center justify-center space-x-2"
+                className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold py-3 px-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover:scale-[1.02] transition-all duration-200 inline-flex items-center justify-center space-x-2"
               >
                 <span>Check-in Now</span>
                 <ArrowRightIcon size={16} />
@@ -444,7 +444,7 @@ function Dashboard() {
             <h2 className="text-xl font-semibold text-gray-900">Recent Check-ins</h2>
             <Link 
               to="/checkin" 
-              className="text-sage-600 hover:text-sage-700 text-sm font-medium flex items-center space-x-1"
+              className="text-primary-600 hover:text-primary-700 text-sm font-medium flex items-center space-x-1"
             >
               <span>View all</span>
               <ChevronRightIcon size={16} />
@@ -494,7 +494,7 @@ function Dashboard() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7 }}
-        className="card-glass text-center bg-gradient-to-r from-sage-50 to-sage-100"
+        className="card-glass text-center bg-gradient-to-r from-primary-50 to-primary-100"
       >
         <div className="text-4xl mb-4">🌱</div>
         <h3 className="text-lg font-semibold text-gray-900 mb-2">

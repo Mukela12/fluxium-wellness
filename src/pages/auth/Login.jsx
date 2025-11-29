@@ -261,7 +261,7 @@ function Login() {
               type="checkbox"
               checked={formData.remember}
               onChange={handleChange}
-              className="h-4 w-4 text-sage-600 focus:ring-sage-500 border-gray-300 rounded"
+              className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
               disabled={isLoading}
             />
             <label htmlFor="remember" className="ml-2 block text-sm text-gray-700">
@@ -271,7 +271,7 @@ function Login() {
 
           <Link
             to="/forgot-password"
-            className="text-sm font-medium text-sage-600 hover:text-sage-500 transition-colors duration-200"
+            className="text-sm font-medium text-primary-600 hover:text-primary-500 transition-colors duration-200"
           >
             Forgot password?
           </Link>
@@ -297,7 +297,7 @@ function Login() {
           <div className="w-full border-t border-gray-300" />
         </div>
         <div className="relative flex justify-center text-sm">
-          <span className="px-2 bg-white text-gray-500">New to WelldifyAI?</span>
+          <span className="px-2 bg-white text-gray-500">New to Fluxium?</span>
         </div>
       </div>
 
@@ -305,7 +305,7 @@ function Login() {
       <div className="mt-6 text-center">
         <Link
           to="/register"
-          className="text-sm font-medium text-sage-600 hover:text-sage-500 transition-colors duration-200"
+          className="text-sm font-medium text-primary-600 hover:text-primary-500 transition-colors duration-200"
         >
           Create your wellness account
         </Link>

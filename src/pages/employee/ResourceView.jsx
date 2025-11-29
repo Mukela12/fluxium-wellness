@@ -387,7 +387,7 @@ const ResourceView = () => {
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <motion.div
-                className="bg-sage-500 h-2 rounded-full"
+                className="bg-primary-500 h-2 rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: `${readingProgress}%` }}
                 transition={{ duration: 0.3 }}
@@ -402,12 +402,12 @@ const ResourceView = () => {
         {/* Resource Header */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
           <div className="flex items-start space-x-4 mb-6">
-            <div className="p-3 bg-sage-100 rounded-xl">
-              <TypeIcon className="h-8 w-8 text-sage-600" />
+            <div className="p-3 bg-primary-100 rounded-xl">
+              <TypeIcon className="h-8 w-8 text-primary-600" />
             </div>
             <div className="flex-1">
               <div className="flex flex-wrap items-center gap-3 mb-3">
-                <span className="px-3 py-1 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">
+                <span className="px-3 py-1 bg-primary-100 text-primary-700 text-sm font-medium rounded-full">
                   {resource.type}
                 </span>
                 <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm font-medium rounded-full">
@@ -523,7 +523,7 @@ const ResourceView = () => {
                 <ul className="space-y-3">
                   {resource.learningObjectives.map((objective, index) => (
                     <li key={index} className="flex items-start space-x-3">
-                      <span className="text-sage-500 mt-0.5">•</span>
+                      <span className="text-primary-500 mt-0.5">•</span>
                       <span className="text-gray-700">{objective}</span>
                     </li>
                   ))}
@@ -556,7 +556,7 @@ const ResourceView = () => {
               {resource.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="inline-flex items-center px-3 py-2 rounded-full text-sm bg-sage-100 text-sage-700 font-medium"
+                  className="inline-flex items-center px-3 py-2 rounded-full text-sm bg-primary-100 text-primary-700 font-medium"
                 >
                   <TagIcon size={14} className="mr-1.5" />
                   {tag}

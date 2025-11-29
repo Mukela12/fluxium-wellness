@@ -20,7 +20,7 @@ const Card = React.forwardRef(({
     glass: 'card-glass',
     elevated: 'bg-white rounded-2xl p-6 shadow-lg',
     flat: 'bg-white rounded-2xl p-6 border border-gray-100',
-    gradient: 'bg-gradient-to-br from-sage-50 to-sage-100 rounded-2xl p-6 shadow-soft',
+    gradient: 'bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-6 shadow-soft',
   };
 
   const paddingVariants = {
@@ -161,7 +161,7 @@ const StatsCard = ({
       </div>
       {icon && (
         <div className="flex-shrink-0 ml-4">
-          <div className="w-10 h-10 bg-sage-100 rounded-lg flex items-center justify-center text-sage-600">
+          <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">
             {icon}
           </div>
         </div>

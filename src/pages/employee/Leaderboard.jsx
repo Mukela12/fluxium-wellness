@@ -112,7 +112,7 @@ function Leaderboard() {
       case 3:
         return 'bg-gradient-to-r from-amber-400 to-amber-500 text-white';
       default:
-        return 'bg-white border border-sage-200';
+        return 'bg-white border border-primary-200';
     }
   };
 
@@ -228,11 +228,11 @@ function Leaderboard() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="card-glass border-2 border-sage-200"
+          className="card-glass border-2 border-primary-200"
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <div className="flex items-center justify-center w-12 h-12 bg-sage-100 rounded-full">
+              <div className="flex items-center justify-center w-12 h-12 bg-primary-100 rounded-full">
                 {currentUser.avatar ? (
                   <img 
                     src={currentUser.avatar} 
@@ -240,7 +240,7 @@ function Leaderboard() {
                     className="w-12 h-12 rounded-full object-cover"
                   />
                 ) : (
-                  <UserIcon size={24} className="text-sage-600" />
+                  <UserIcon size={24} className="text-primary-600" />
                 )}
               </div>
               <div>
@@ -251,7 +251,7 @@ function Leaderboard() {
             
             <div className="flex items-center space-x-6">
               <div className="text-center">
-                <div className="text-2xl font-bold text-sage-600">
+                <div className="text-2xl font-bold text-primary-600">
                   #{currentUser.rank || currentUser.globalRank}
                 </div>
                 <div className="text-xs text-gray-500">Rank</div>
@@ -366,7 +366,7 @@ function Leaderboard() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
-        className="card-glass text-center bg-gradient-to-r from-sage-50 to-sage-100"
+        className="card-glass text-center bg-gradient-to-r from-primary-50 to-primary-100"
       >
         <div className="text-4xl mb-4">🌟</div>
         <h3 className="text-lg font-semibold text-gray-900 mb-2">

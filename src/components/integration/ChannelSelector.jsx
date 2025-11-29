@@ -49,7 +49,7 @@ function ChannelSelector({
               className={`
                 relative border-2 rounded-xl p-4 cursor-pointer transition-all
                 ${isSelected 
-                  ? 'border-sage-500 bg-sage-50' 
+                  ? 'border-primary-500 bg-primary-50' 
                   : 'border-gray-200 hover:border-gray-300'
                 }
                 ${isDisabled ? 'cursor-not-allowed opacity-75' : ''}
@@ -59,7 +59,7 @@ function ChannelSelector({
               <div className="flex items-start space-x-3">
                 <div className={`
                   w-10 h-10 rounded-lg flex items-center justify-center
-                  ${isSelected ? 'bg-sage-500 text-white' : 'bg-gray-100 text-gray-500'}
+                  ${isSelected ? 'bg-primary-500 text-white' : 'bg-gray-100 text-gray-500'}
                 `}>
                   <channel.icon size={20} />
                 </div>
@@ -86,7 +86,7 @@ function ChannelSelector({
                         </span>
                       </div>
                       {slackStats.connectedCount > 0 && (
-                        <div className="bg-sage-100 text-sage-700 rounded px-2 py-1">
+                        <div className="bg-primary-100 text-primary-700 rounded px-2 py-1">
                           {slackStats.connectedCount} will receive via Slack
                         </div>
                       )}
@@ -106,7 +106,7 @@ function ChannelSelector({
                 checked={isSelected}
                 onChange={() => {}}
                 disabled={isDisabled}
-                className="absolute top-4 right-4 w-5 h-5 text-sage-600 rounded focus:ring-sage-300"
+                className="absolute top-4 right-4 w-5 h-5 text-primary-600 rounded focus:ring-primary-300"
               />
             </div>
           );

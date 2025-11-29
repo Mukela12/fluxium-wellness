@@ -125,7 +125,7 @@ function WellnessStep({ onNext, onBack, userData, onUpdateData }) {
                 onClick={() => setFormData(prev => ({ ...prev, currentWellness: level.value }))}
                 className={`p-4 rounded-xl border-2 transition-all text-center ${
                   formData.currentWellness === level.value
-                    ? 'border-sage-500 bg-sage-50'
+                    ? 'border-primary-500 bg-primary-50'
                     : 'border-gray-200 hover:border-gray-300'
                 }`}
                 whileHover={{ scale: 1.02 }}
@@ -147,7 +147,7 @@ function WellnessStep({ onNext, onBack, userData, onUpdateData }) {
         {/* Wellness Goals */}
         <div>
           <label className="block text-lg font-medium text-gray-900 mb-4">
-            What are your main WelldifyAI wellness goals? * (Select all that apply)
+            What are your main wellness goals? * (Select all that apply)
           </label>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {wellnessGoals.map((goal) => (
@@ -157,17 +157,17 @@ function WellnessStep({ onNext, onBack, userData, onUpdateData }) {
                 onClick={() => handleArrayChange('wellnessGoals', goal.id)}
                 className={`p-4 rounded-xl border-2 transition-all text-left ${
                   formData.wellnessGoals.includes(goal.id)
-                    ? 'border-sage-500 bg-sage-50'
+                    ? 'border-primary-500 bg-primary-50'
                     : 'border-gray-200 hover:border-gray-300'
                 }`}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <div className="flex items-center">
-                  <goal.icon size={20} className="text-sage-600 mr-3" />
+                  <goal.icon size={20} className="text-primary-600 mr-3" />
                   <span className="font-medium text-gray-900">{goal.label}</span>
                   {formData.wellnessGoals.includes(goal.id) && (
-                    <CheckCircleIcon size={16} className="text-sage-600 ml-auto" />
+                    <CheckCircleIcon size={16} className="text-primary-600 ml-auto" />
                   )}
                 </div>
               </motion.button>

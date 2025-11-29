@@ -80,7 +80,7 @@ function SlackIntegrationCard() {
     return (
       <div className="card-glass">
         <div className="flex items-center justify-center py-12">
-          <Loader2 className="w-8 h-8 animate-spin text-sage-600" />
+          <Loader2 className="w-8 h-8 animate-spin text-primary-600" />
         </div>
       </div>
     );
@@ -94,7 +94,7 @@ function SlackIntegrationCard() {
       className="card-glass"
     >
       <div className="flex items-center space-x-3 mb-6">
-        <MessageSquareIcon size={24} className="text-sage-600" />
+        <MessageSquareIcon size={24} className="text-primary-600" />
         <div>
           <h3 className="text-xl font-semibold text-gray-900">
             Slack Integration
@@ -108,16 +108,16 @@ function SlackIntegrationCard() {
       {slackStatus?.isConnected ? (
         <div className="space-y-4">
           {/* Connected Status */}
-          <div className="bg-sage-50 border border-sage-200 rounded-lg p-4">
+          <div className="bg-primary-50 border border-primary-200 rounded-lg p-4">
             <div className="flex items-start space-x-3">
-              <CheckCircle2 size={20} className="text-sage-600 mt-0.5" />
+              <CheckCircle2 size={20} className="text-primary-600 mt-0.5" />
               <div className="flex-1">
-                <p className="font-medium text-sage-900">Connected to Slack</p>
-                <p className="text-sm text-sage-700 mt-1">
+                <p className="font-medium text-primary-900">Connected to Slack</p>
+                <p className="text-sm text-primary-700 mt-1">
                   Workspace: {slackStatus.teamName || 'Your Workspace'}
                 </p>
                 {slackStatus.connectedAt && (
-                  <p className="text-xs text-sage-600 mt-1">
+                  <p className="text-xs text-primary-600 mt-1">
                     Connected since {new Date(slackStatus.connectedAt).toLocaleDateString()}
                   </p>
                 )}
@@ -130,19 +130,19 @@ function SlackIntegrationCard() {
             <h4 className="font-medium text-gray-900 mb-3">Active Benefits:</h4>
             <ul className="space-y-2">
               <li className="flex items-center space-x-2 text-sm text-gray-700">
-                <CheckCircle2 size={16} className="text-sage-600" />
+                <CheckCircle2 size={16} className="text-primary-600" />
                 <span>Receive wellness surveys via Slack DM</span>
               </li>
               <li className="flex items-center space-x-2 text-sm text-gray-700">
-                <CheckCircle2 size={16} className="text-sage-600" />
+                <CheckCircle2 size={16} className="text-primary-600" />
                 <span>Quick mood check-ins with /quick-checkin</span>
               </li>
               <li className="flex items-center space-x-2 text-sm text-gray-700">
-                <CheckCircle2 size={16} className="text-sage-600" />
+                <CheckCircle2 size={16} className="text-primary-600" />
                 <span>Automated reminder notifications</span>
               </li>
               <li className="flex items-center space-x-2 text-sm text-gray-700">
-                <CheckCircle2 size={16} className="text-sage-600" />
+                <CheckCircle2 size={16} className="text-primary-600" />
                 <span>Real-time Happy Coins and streak updates</span>
               </li>
             </ul>
@@ -174,23 +174,23 @@ function SlackIntegrationCard() {
           </div>
 
           {/* Features List */}
-          <div className="bg-sage-50 rounded-lg p-4">
-            <h4 className="font-medium text-sage-900 mb-3">What you'll get:</h4>
+          <div className="bg-primary-50 rounded-lg p-4">
+            <h4 className="font-medium text-primary-900 mb-3">What you'll get:</h4>
             <ul className="space-y-2">
-              <li className="flex items-center space-x-2 text-sm text-sage-700">
-                <MessageSquareIcon size={16} className="text-sage-600" />
+              <li className="flex items-center space-x-2 text-sm text-primary-700">
+                <MessageSquareIcon size={16} className="text-primary-600" />
                 <span>Wellness surveys delivered to your Slack DM</span>
               </li>
-              <li className="flex items-center space-x-2 text-sm text-sage-700">
-                <MessageSquareIcon size={16} className="text-sage-600" />
+              <li className="flex items-center space-x-2 text-sm text-primary-700">
+                <MessageSquareIcon size={16} className="text-primary-600" />
                 <span>Quick daily mood check-ins with slash commands</span>
               </li>
-              <li className="flex items-center space-x-2 text-sm text-sage-700">
-                <MessageSquareIcon size={16} className="text-sage-600" />
+              <li className="flex items-center space-x-2 text-sm text-primary-700">
+                <MessageSquareIcon size={16} className="text-primary-600" />
                 <span>Instant notifications for new surveys</span>
               </li>
-              <li className="flex items-center space-x-2 text-sm text-sage-700">
-                <MessageSquareIcon size={16} className="text-sage-600" />
+              <li className="flex items-center space-x-2 text-sm text-primary-700">
+                <MessageSquareIcon size={16} className="text-primary-600" />
                 <span>Track your wellness without leaving Slack</span>
               </li>
             </ul>

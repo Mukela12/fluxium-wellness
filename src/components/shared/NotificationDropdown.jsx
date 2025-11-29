@@ -191,11 +191,11 @@ const NotificationDropdown = () => {
       {/* Notification Bell */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="relative p-2 text-gray-600 hover:text-sage-600 focus:outline-none focus:ring-2 focus:ring-sage-500 focus:ring-offset-2 rounded-full"
+        className="relative p-2 text-gray-600 hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded-full"
         aria-label="Notifications"
       >
         {unreadCount > 0 ? (
-          <BellSolidIcon className="h-6 w-6 text-sage-600" />
+          <BellSolidIcon className="h-6 w-6 text-primary-600" />
         ) : (
           <BellIcon className="h-6 w-6" />
         )}
@@ -226,7 +226,7 @@ const NotificationDropdown = () => {
               {unreadCount > 0 && (
                 <button
                   onClick={markAllAsRead}
-                  className="text-sm text-sage-600 hover:text-sage-700 font-medium"
+                  className="text-sm text-primary-600 hover:text-primary-700 font-medium"
                 >
                   Mark all as read
                 </button>
@@ -292,7 +292,7 @@ const NotificationDropdown = () => {
                       <button
                         onClick={loadMoreNotifications}
                         disabled={loading}
-                        className="text-sm text-sage-600 hover:text-sage-700 font-medium disabled:text-gray-400"
+                        className="text-sm text-primary-600 hover:text-primary-700 font-medium disabled:text-gray-400"
                       >
                         {loading ? 'Loading...' : 'Load more'}
                       </button>

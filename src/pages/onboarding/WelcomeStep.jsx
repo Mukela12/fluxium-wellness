@@ -50,18 +50,18 @@ function WelcomeStep({ onNext, userData }) {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-          className="w-20 h-20 bg-gradient-to-br from-sage-400 to-sage-600 rounded-full flex items-center justify-center mx-auto mb-6"
+          className="w-20 h-20 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-6"
         >
           <HeartIcon size={40} className="text-white" />
         </motion.div>
         
         <h1 className="text-3xl font-bold text-gray-900 mb-4">
-          Welcome to WellifyAI, {userData?.name?.split(' ')[0] || 'there'}!
+          Welcome to Fluxium, {userData?.name?.split(' ')[0] || 'there'}!
         </h1>
-        
+
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          We're excited to have you join our wellness community. Let's take a quick tour of what makes 
-          WellifyAI special and how it can help improve your well-being at work.
+          We're excited to have you join our wellness community. Let's take a quick tour of what makes
+          Fluxium special and how it can help improve your well-being at work.
         </p>
       </div>
 
@@ -93,22 +93,22 @@ function WelcomeStep({ onNext, userData }) {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.7 }}
-        className="bg-gradient-to-r from-sage-50 to-green-50 rounded-xl p-6 mb-8"
+        className="bg-gradient-to-r from-primary-50 to-green-50 rounded-xl p-6 mb-8"
       >
         <h3 className="text-lg font-semibold text-gray-900 mb-4">
           Join a Thriving Wellness Community
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
           <div>
-            <div className="text-2xl font-bold text-sage-600">500+</div>
+            <div className="text-2xl font-bold text-primary-600">500+</div>
             <div className="text-sm text-gray-600">Daily Check-ins</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-sage-600">95%</div>
+            <div className="text-2xl font-bold text-primary-600">95%</div>
             <div className="text-sm text-gray-600">Employee Satisfaction</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-sage-600">50+</div>
+            <div className="text-2xl font-bold text-primary-600">50+</div>
             <div className="text-sm text-gray-600">Wellness Challenges</div>
           </div>
         </div>

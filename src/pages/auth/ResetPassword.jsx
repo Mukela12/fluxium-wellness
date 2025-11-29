@@ -286,7 +286,7 @@ function ResetPassword() {
       <div className="mt-8 text-center">
         <Link
           to="/login"
-          className="text-sm font-medium text-sage-600 hover:text-sage-500 transition-colors duration-200"
+          className="text-sm font-medium text-primary-600 hover:text-primary-500 transition-colors duration-200"
         >
           Back to Sign In
         </Link>

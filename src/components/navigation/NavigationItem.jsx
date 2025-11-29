@@ -64,7 +64,7 @@ const NavigationItem = ({
         className={cn(
           'flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors duration-200 relative',
           isActive
-            ? 'bg-sage-100 text-sage-700'
+            ? 'bg-primary-100 text-primary-700'
             : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
         )}
       >
@@ -94,7 +94,7 @@ const NavigationItem = ({
       className={cn(
         'group flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 relative',
         isActive
-          ? 'bg-gradient-to-r from-sage-100 to-sage-200 text-sage-700 shadow-sm'
+          ? 'bg-gradient-to-r from-primary-100 to-primary-200 text-primary-700 shadow-sm'
           : 'text-gray-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 hover:text-gray-900'
       )}
     >
@@ -102,7 +102,7 @@ const NavigationItem = ({
         <item.icon 
           size={18} 
           className={cn(
-            isActive ? 'text-sage-700' : 'text-gray-400 group-hover:text-gray-500'
+            isActive ? 'text-primary-700' : 'text-gray-400 group-hover:text-gray-500'
           )} 
         />
         {showSurveyBadge && (

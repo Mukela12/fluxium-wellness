@@ -119,7 +119,7 @@ function Challenges() {
       case 'fitness': return 'text-blue-600 bg-blue-100';
       case 'mental-health': return 'text-purple-600 bg-purple-100';
       case 'nutrition': return 'text-green-600 bg-green-100';
-      case 'social': return 'text-sage-600 bg-sage-100';
+      case 'social': return 'text-primary-600 bg-primary-100';
       default: return 'text-gray-600 bg-gray-100';
     }
   };
@@ -288,7 +288,7 @@ function Challenges() {
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <motion.div
-                        className="bg-gradient-to-r from-sage-500 to-green-500 h-2 rounded-full"
+                        className="bg-gradient-to-r from-primary-500 to-green-500 h-2 rounded-full"
                         initial={{ width: 0 }}
                         animate={{ width: `${progressPercentage}%` }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -446,7 +446,7 @@ function Challenges() {
               onClick={() => setActiveTab('available')}
               className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
                 activeTab === 'available'
-                  ? 'border-sage-500 text-sage-600'
+                  ? 'border-primary-500 text-primary-600'
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
               }`}
             >
@@ -456,7 +456,7 @@ function Challenges() {
               onClick={() => setActiveTab('my-challenges')}
               className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
                 activeTab === 'my-challenges'
-                  ? 'border-sage-500 text-sage-600'
+                  ? 'border-primary-500 text-primary-600'
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
               }`}
             >

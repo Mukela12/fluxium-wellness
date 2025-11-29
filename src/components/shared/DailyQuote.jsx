@@ -143,7 +143,7 @@ const DailyQuote = ({ className = "" }) => {
           <p className="text-gray-600 text-sm">No quote available today</p>
           <button
             onClick={loadTodayQuote}
-            className="mt-2 text-sage-600 hover:text-sage-700 text-sm font-medium flex items-center space-x-1 mx-auto"
+            className="mt-2 text-primary-600 hover:text-primary-700 text-sm font-medium flex items-center space-x-1 mx-auto"
           >
             <RefreshCw className="h-4 w-4" />
             <span>Try again</span>
@@ -163,15 +163,15 @@ const DailyQuote = ({ className = "" }) => {
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-sage-100 rounded-full flex items-center justify-center">
-            <Quote className="h-5 w-5 text-sage-600" />
+          <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+            <Quote className="h-5 w-5 text-primary-600" />
           </div>
           <div>
             <h3 className="text-sm font-semibold text-gray-900">Daily Inspiration</h3>
             <p className="text-xs text-gray-500">{formatDate()}</p>
           </div>
         </div>
-        <span className="px-3 py-1 bg-sage-50 text-sage-700 rounded-full text-xs font-medium">
+        <span className="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-medium">
           {getCategoryLabel(quote.category)}
         </span>
       </div>
@@ -179,7 +179,7 @@ const DailyQuote = ({ className = "" }) => {
       {/* Quote */}
       <blockquote className="mb-6">
         <div className="relative">
-          <div className="absolute -top-2 -left-1 text-4xl text-sage-200 font-serif leading-none">
+          <div className="absolute -top-2 -left-1 text-4xl text-primary-200 font-serif leading-none">
             "
           </div>
           <p className="text-lg text-gray-800 leading-relaxed font-medium pl-6 mb-3 italic">
@@ -235,9 +235,9 @@ const DailyQuote = ({ className = "" }) => {
           animate={{ opacity: 1, height: 'auto' }}
           className="mt-4 pt-4 border-t border-gray-100"
         >
-          <div className="bg-sage-50 rounded-lg p-4">
+          <div className="bg-primary-50 rounded-lg p-4">
             <p className="text-sm text-gray-700">
-              <span className="font-semibold text-sage-700">Reflection:</span> {quote.reflectionPrompt}
+              <span className="font-semibold text-primary-700">Reflection:</span> {quote.reflectionPrompt}
             </p>
           </div>
         </motion.div>

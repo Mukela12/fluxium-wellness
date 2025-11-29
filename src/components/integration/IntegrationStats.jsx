@@ -75,12 +75,12 @@ function IntegrationStats({ teamData = null }) {
     >
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-3">
-          <MessageSquareIcon size={24} className="text-sage-600" />
+          <MessageSquareIcon size={24} className="text-primary-600" />
           <h3 className="text-lg font-semibold text-gray-900">
             Integration Overview
           </h3>
         </div>
-        <button className="text-sm text-sage-600 hover:text-sage-700 flex items-center space-x-1">
+        <button className="text-sm text-primary-600 hover:text-primary-700 flex items-center space-x-1">
           <span>View Details</span>
           <ExternalLinkIcon size={14} />
         </button>
@@ -94,7 +94,7 @@ function IntegrationStats({ teamData = null }) {
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div 
-            className="bg-gradient-to-r from-sage-500 to-sage-600 h-2 rounded-full transition-all duration-500"
+            className="bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full transition-all duration-500"
             style={{ width: `${adoptionRate}%` }}
           />
         </div>
@@ -109,14 +109,14 @@ function IntegrationStats({ teamData = null }) {
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <MessageSquareIcon size={16} className="text-sage-600" />
+              <MessageSquareIcon size={16} className="text-primary-600" />
               <span className="text-sm text-gray-600">Slack Responses</span>
             </div>
             <div className="flex items-center space-x-2">
               <span className="text-sm font-medium">{channelComparison.slack}%</span>
               <div className="w-20 bg-gray-200 rounded-full h-1.5">
                 <div 
-                  className="bg-sage-600 h-1.5 rounded-full"
+                  className="bg-primary-600 h-1.5 rounded-full"
                   style={{ width: `${channelComparison.slack}%` }}
                 />
               </div>
@@ -143,9 +143,9 @@ function IntegrationStats({ teamData = null }) {
 
       {/* Key Metrics */}
       <div className="grid grid-cols-2 gap-4">
-        <div className="bg-sage-50 rounded-lg p-3">
+        <div className="bg-primary-50 rounded-lg p-3">
           <div className="flex items-center space-x-2 mb-1">
-            <TrendingUpIcon size={16} className="text-sage-600" />
+            <TrendingUpIcon size={16} className="text-primary-600" />
             <span className="text-xs text-gray-600">Avg Response Time</span>
           </div>
           <p className="text-lg font-semibold text-gray-900">
@@ -184,8 +184,8 @@ function IntegrationStats({ teamData = null }) {
       )}
 
       {/* Call to Action */}
-      <div className="mt-4 p-3 bg-sage-50 rounded-lg">
-        <p className="text-xs text-sage-700">
+      <div className="mt-4 p-3 bg-primary-50 rounded-lg">
+        <p className="text-xs text-primary-700">
           <strong>Tip:</strong> Encourage team members to connect Slack for faster survey responses
         </p>
       </div>

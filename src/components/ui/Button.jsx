@@ -7,7 +7,7 @@ const buttonVariants = {
   secondary: 'btn-secondary',
   outline: 'btn-outline',
   ghost: 'hover:bg-gray-100 text-gray-700',
-  link: 'text-sage-600 hover:text-sage-700 underline-offset-4 hover:underline',
+  link: 'text-primary-600 hover:text-primary-700 underline-offset-4 hover:underline',
 };
 
 const buttonSizes = {

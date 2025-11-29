@@ -36,9 +36,9 @@ const Input = React.forwardRef(({
 
   const inputVariants = {
     default: 'input-primary',
-    outline: 'border-2 border-gray-200 rounded-xl focus:border-sage-300 focus:ring-4 focus:ring-sage-300/20',
-    filled: 'bg-gray-50 border border-transparent rounded-xl focus:bg-white focus:border-sage-300 focus:ring-4 focus:ring-sage-300/20',
-    underline: 'border-0 border-b-2 border-gray-200 rounded-none focus:border-sage-300 focus:ring-0 bg-transparent',
+    outline: 'border-2 border-gray-200 rounded-xl focus:border-primary-300 focus:ring-4 focus:ring-primary-300/20',
+    filled: 'bg-gray-50 border border-transparent rounded-xl focus:bg-white focus:border-primary-300 focus:ring-4 focus:ring-primary-300/20',
+    underline: 'border-0 border-b-2 border-gray-200 rounded-none focus:border-primary-300 focus:ring-0 bg-transparent',
   };
 
   const hasValue = value.length > 0;
@@ -105,7 +105,7 @@ const Input = React.forwardRef(({
         <motion.label
           className={cn(
             'block text-sm font-medium mb-2 transition-colors duration-200',
-            focused || hasValue ? 'text-sage-600' : 'text-gray-700',
+            focused || hasValue ? 'text-primary-600' : 'text-gray-700',
             error && 'text-red-600',
             success && 'text-green-600'
           )}
@@ -163,7 +163,7 @@ const Input = React.forwardRef(({
         {/* Focus Ring Animation */}
         {animate && (
           <motion.div
-            className="absolute inset-0 rounded-xl border-2 border-sage-300 pointer-events-none"
+            className="absolute inset-0 rounded-xl border-2 border-primary-300 pointer-events-none"
             initial={{ opacity: 0, scale: 1.02 }}
             animate={{
               opacity: focused ? 0.3 : 0,
@@ -220,7 +220,7 @@ const Textarea = React.forwardRef(({
 
   const textareaClasses = cn(
     'w-full px-4 py-3 border border-gray-200 rounded-xl resize-vertical',
-    'focus:border-sage-300 focus:ring-4 focus:ring-sage-300/20 focus:outline-none',
+    'focus:border-primary-300 focus:ring-4 focus:ring-primary-300/20 focus:outline-none',
     'transition-all duration-200 ease-out placeholder-gray-400',
     'disabled:opacity-50 disabled:cursor-not-allowed',
     error && 'border-red-300 focus:border-red-300 focus:ring-red-300/20',
@@ -249,7 +249,7 @@ const Textarea = React.forwardRef(({
       {label && (
         <label className={cn(
           'block text-sm font-medium mb-2 transition-colors duration-200',
-          focused ? 'text-sage-600' : 'text-gray-700',
+          focused ? 'text-primary-600' : 'text-gray-700',
           error && 'text-red-600',
           success && 'text-green-600'
         )}>

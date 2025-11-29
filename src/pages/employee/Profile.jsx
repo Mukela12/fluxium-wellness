@@ -135,7 +135,7 @@ function Profile() {
         <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
           {/* Profile Picture */}
           <div className="relative">
-            <div className="w-32 h-32 bg-gradient-to-br from-sage-200 to-sage-300 rounded-2xl flex items-center justify-center">
+            <div className="w-32 h-32 bg-gradient-to-br from-primary-200 to-primary-300 rounded-2xl flex items-center justify-center">
               {user?.avatar_url ? (
                 <img
                   src={user.avatar_url}
@@ -143,10 +143,10 @@ function Profile() {
                   className="w-32 h-32 rounded-2xl object-cover"
                 />
               ) : (
-                <UserIcon size={48} className="text-sage-600" />
+                <UserIcon size={48} className="text-primary-600" />
               )}
             </div>
-            <button className="absolute -bottom-2 -right-2 w-10 h-10 bg-sage-500 rounded-full flex items-center justify-center text-white hover:bg-sage-600 transition-colors">
+            <button className="absolute -bottom-2 -right-2 w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center text-white hover:bg-primary-600 transition-colors">
               <CameraIcon size={18} />
             </button>
           </div>
@@ -163,19 +163,19 @@ function Profile() {
             {/* Stats */}
             <div className="flex justify-center md:justify-start space-x-6">
               <div className="text-center">
-                <div className="text-xl font-bold text-sage-600">
+                <div className="text-xl font-bold text-primary-600">
                   {wellnessStats?.overview?.totalHappyCoins || user?.wellness?.happyCoins || 0}
                 </div>
                 <div className="text-xs text-gray-600">Happy Coins</div>
               </div>
               <div className="text-center">
-                <div className="text-xl font-bold text-sage-600">
+                <div className="text-xl font-bold text-primary-600">
                   {wellnessStats?.overview?.currentStreak || user?.wellness?.currentStreak || 0}
                 </div>
                 <div className="text-xs text-gray-600">Day Streak</div>
               </div>
               <div className="text-center">
-                <div className="text-xl font-bold text-sage-600">
+                <div className="text-xl font-bold text-primary-600">
                   {wellnessStats?.milestones?.totalCheckIns || user?.wellness?.totalCheckIns || 0}
                 </div>
                 <div className="text-xs text-gray-600">Check-ins</div>
@@ -382,7 +382,7 @@ function Profile() {
                       <h4 className="font-semibold text-gray-900 mb-1">{achievement.title}</h4>
                       <p className="text-sm text-gray-600">{achievement.description}</p>
                       {achievement.isUnlocked && achievement.unlockedAt && (
-                        <p className="text-xs text-sage-600 mt-2">
+                        <p className="text-xs text-primary-600 mt-2">
                           Unlocked {new Date(achievement.unlockedAt).toLocaleDateString()}
                         </p>
                       )}
@@ -390,7 +390,7 @@ function Profile() {
                         <div className="mt-2">
                           <div className="w-full bg-gray-200 rounded-full h-2">
                             <div 
-                              className="bg-sage-500 h-2 rounded-full" 
+                              className="bg-primary-500 h-2 rounded-full" 
                               style={{ width: `${Math.min((achievement.progress / achievement.targetValue) * 100, 100)}%` }}
                             ></div>
                           </div>
@@ -427,7 +427,7 @@ function Profile() {
               {/* Notifications */}
               <div className="card-glass">
                 <div className="flex items-center space-x-3 mb-6">
-                  <BellIcon size={24} className="text-sage-600" />
+                  <BellIcon size={24} className="text-primary-600" />
                   <h3 className="text-xl font-semibold text-gray-900">
                     Notification Preferences
                   </h3>
@@ -439,7 +439,7 @@ function Profile() {
                       <h4 className="font-medium text-gray-900">Daily Check-in Reminders</h4>
                       <p className="text-sm text-gray-600">Get reminded to complete your daily wellness check-in</p>
                     </div>
-                    <input type="checkbox" className="w-5 h-5 text-sage-600 rounded focus:ring-sage-300" defaultChecked />
+                    <input type="checkbox" className="w-5 h-5 text-primary-600 rounded focus:ring-primary-300" defaultChecked />
                   </div>
                   
                   <div className="flex items-center justify-between">
@@ -447,7 +447,7 @@ function Profile() {
                       <h4 className="font-medium text-gray-900">Survey Notifications</h4>
                       <p className="text-sm text-gray-600">Receive notifications about new surveys</p>
                     </div>
-                    <input type="checkbox" className="w-5 h-5 text-sage-600 rounded focus:ring-sage-300" defaultChecked />
+                    <input type="checkbox" className="w-5 h-5 text-primary-600 rounded focus:ring-primary-300" defaultChecked />
                   </div>
                   
                   <div className="flex items-center justify-between">
@@ -455,7 +455,7 @@ function Profile() {
                       <h4 className="font-medium text-gray-900">Achievement Updates</h4>
                       <p className="text-sm text-gray-600">Get notified when you earn new achievements</p>
                     </div>
-                    <input type="checkbox" className="w-5 h-5 text-sage-600 rounded focus:ring-sage-300" />
+                    <input type="checkbox" className="w-5 h-5 text-primary-600 rounded focus:ring-primary-300" />
                   </div>
                 </div>
               </div>
@@ -466,7 +466,7 @@ function Profile() {
               {/* Security */}
               <div className="card-glass">
                 <div className="flex items-center space-x-3 mb-6">
-                  <KeyIcon size={24} className="text-sage-600" />
+                  <KeyIcon size={24} className="text-primary-600" />
                   <h3 className="text-xl font-semibold text-gray-900">
                     Security & Privacy
                   </h3>

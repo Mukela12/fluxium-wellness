@@ -265,13 +265,13 @@ const Journal = () => {
   const filteredEntries = getFilteredEntries();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sage-50 via-sage-100 to-sage-200">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-primary-100 to-primary-200">
       {/* Journal Header */}
-      <div className="bg-white/80 backdrop-blur-sm border-b border-sage-200/50 sticky top-0 z-10">
+      <div className="bg-white/80 backdrop-blur-sm border-b border-primary-200/50 sticky top-0 z-10">
         <div className="max-w-4xl mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <div className="p-3 bg-gradient-to-br from-sage-400 to-sage-500 rounded-xl shadow-lg">
+              <div className="p-3 bg-gradient-to-br from-primary-400 to-primary-500 rounded-xl shadow-lg">
                 <BookOpen className="h-8 w-8 text-white" />
               </div>
               <div>
@@ -284,7 +284,7 @@ const Journal = () => {
               onClick={handleNewEntry}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center space-x-2 bg-gradient-to-r from-sage-500 to-sage-600 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200"
+              className="flex items-center space-x-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200"
             >
               <Pencil className="h-5 w-5" />
               <span className="font-medium">Write New Entry</span>
@@ -301,13 +301,13 @@ const Journal = () => {
             animate={{ opacity: 1, y: 0 }}
             className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8"
           >
-            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-sage-200/50">
+            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-primary-200/50">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-gray-600 mb-1">Total Entries</p>
                   <p className="text-2xl font-bold text-gray-900">{stats.totalEntries || 0}</p>
                 </div>
-                <BookOpen className="h-8 w-8 text-sage-500" />
+                <BookOpen className="h-8 w-8 text-primary-500" />
               </div>
             </div>
             
@@ -348,10 +348,10 @@ const Journal = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-gradient-to-r from-sage-50 to-sage-100 rounded-2xl p-6 border border-sage-200/50 mb-8"
+            className="bg-gradient-to-r from-primary-50 to-primary-100 rounded-2xl p-6 border border-primary-200/50 mb-8"
           >
             <div className="flex items-center space-x-3 mb-4">
-              <Lightbulb className="h-6 w-6 text-sage-600" />
+              <Lightbulb className="h-6 w-6 text-primary-600" />
               <h3 className="text-lg font-semibold text-gray-900">Writing Inspiration</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -360,10 +360,10 @@ const Journal = () => {
                   key={index}
                   onClick={() => usePrompt(prompt)}
                   whileHover={{ scale: 1.02 }}
-                  className="text-left p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-sage-200/50 hover:border-sage-300/50 transition-all duration-200"
+                  className="text-left p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-primary-200/50 hover:border-primary-300/50 transition-all duration-200"
                 >
                   <div className="flex items-start space-x-3">
-                    <Star className="h-5 w-5 text-sage-500 mt-0.5 flex-shrink-0" />
+                    <Star className="h-5 w-5 text-primary-500 mt-0.5 flex-shrink-0" />
                     <p className="text-sm text-gray-700 leading-relaxed">
                       {typeof prompt === 'string' ? prompt : prompt.text || 'No prompt available'}
                     </p>
@@ -382,11 +382,11 @@ const Journal = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="bg-white/80 backdrop-blur-sm rounded-2xl border border-sage-200/50 p-8 mb-8 shadow-lg"
+              className="bg-white/80 backdrop-blur-sm rounded-2xl border border-primary-200/50 p-8 mb-8 shadow-lg"
             >
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl font-semibold text-gray-900 flex items-center space-x-2">
-                  <Pencil className="h-6 w-6 text-sage-500" />
+                  <Pencil className="h-6 w-6 text-primary-500" />
                   <span>New Journal Entry</span>
                 </h2>
                 <button
@@ -408,7 +408,7 @@ const Journal = () => {
                     value={newEntry.title}
                     onChange={(e) => setNewEntry(prev => ({ ...prev, title: e.target.value }))}
                     placeholder="Give your entry a meaningful title..."
-                    className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sage-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
                     required
                   />
                 </div>
@@ -422,7 +422,7 @@ const Journal = () => {
                     <select
                       value={newEntry.category}
                       onChange={(e) => setNewEntry(prev => ({ ...prev, category: e.target.value }))}
-                      className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sage-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     >
                       {categories.filter(c => c.value !== 'all').map(category => (
                         <option key={category.value} value={category.value}>
@@ -439,7 +439,7 @@ const Journal = () => {
                     <select
                       value={newEntry.mood}
                       onChange={(e) => setNewEntry(prev => ({ ...prev, mood: parseInt(e.target.value) }))}
-                      className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sage-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     >
                       <option value={1}>😢 Very Poor</option>
                       <option value={2}>😕 Poor</option>
@@ -460,7 +460,7 @@ const Journal = () => {
                     onChange={(e) => setNewEntry(prev => ({ ...prev, content: e.target.value }))}
                     placeholder="Pour your heart out... What happened today? How do you feel? What are you grateful for?"
                     rows={8}
-                    className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sage-500 focus:border-transparent resize-none transition-all duration-200"
+                    className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none transition-all duration-200"
                     style={{ fontFamily: 'Georgia, serif', lineHeight: '1.6' }}
                     maxLength={10000}
                   />
@@ -468,7 +468,7 @@ const Journal = () => {
                     <span className={newEntry.content.length < 10 ? 'text-red-500' : ''}>
                       {newEntry.content.length < 10 && `Minimum 10 characters required`}
                     </span>
-                    <span className={newEntry.content.length > 9900 ? 'text-sage-500' : ''}>
+                    <span className={newEntry.content.length > 9900 ? 'text-primary-500' : ''}>
                       {newEntry.content.length} / 10,000
                     </span>
                   </div>
@@ -484,7 +484,7 @@ const Journal = () => {
                     value={newEntry.tags}
                     onChange={(e) => setNewEntry(prev => ({ ...prev, tags: e.target.value }))}
                     placeholder="grateful, growth, mindfulness, work-life-balance"
-                    className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sage-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   />
                   <p className="text-xs text-gray-500 mt-1">Separate tags with commas to help organize your entries</p>
                 </div>
@@ -503,7 +503,7 @@ const Journal = () => {
                     disabled={submitting || !newEntry.title.trim() || !newEntry.content.trim()}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="px-8 py-3 bg-gradient-to-r from-sage-500 to-sage-600 text-white rounded-xl hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+                    className="px-8 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
                   >
                     {submitting ? 'Saving...' : 'Save Entry'}
                   </motion.button>
@@ -522,14 +522,14 @@ const Journal = () => {
               placeholder="Search your entries..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 bg-white/70 backdrop-blur-sm border border-gray-300 rounded-xl focus:ring-2 focus:ring-sage-500 focus:border-transparent"
+              className="w-full pl-12 pr-4 py-3 bg-white/70 backdrop-blur-sm border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent"
             />
           </div>
           
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="px-4 py-3 bg-white/70 backdrop-blur-sm border border-gray-300 rounded-xl focus:ring-2 focus:ring-sage-500 focus:border-transparent min-w-[200px]"
+            className="px-4 py-3 bg-white/70 backdrop-blur-sm border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent min-w-[200px]"
           >
             {categories.map(category => (
               <option key={category.value} value={category.value}>
@@ -645,7 +645,7 @@ const Journal = () => {
                   onClick={handleNewEntry}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-sage-500 to-sage-600 text-white px-8 py-4 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-200"
+                  className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-4 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-200"
                 >
                   Write Your First Entry
                 </motion.button>
@@ -657,7 +657,7 @@ const Journal = () => {
           {loadingMore && (
             <div className="text-center py-8">
               <div className="inline-flex items-center space-x-2 text-gray-500">
-                <div className="w-4 h-4 border-2 border-gray-300 border-t-sage-500 rounded-full animate-spin"></div>
+                <div className="w-4 h-4 border-2 border-gray-300 border-t-primary-500 rounded-full animate-spin"></div>
                 <span>Loading more entries...</span>
               </div>
             </div>

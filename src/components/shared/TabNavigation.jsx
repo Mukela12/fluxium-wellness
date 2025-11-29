@@ -12,7 +12,7 @@ function TabNavigation({ tabs, activeTab, onTabChange, className = "" }) {
           onClick={() => onTabChange(id)}
           className={`flex-1 flex items-center justify-center space-x-2 py-3 px-4 rounded-lg font-medium transition-all ${
             activeTab === id
-              ? 'bg-white text-sage-600 shadow-sm'
+              ? 'bg-white text-primary-600 shadow-sm'
               : 'text-gray-600 hover:text-gray-900 hover:bg-white hover:bg-opacity-50'
           }`}
         >
@@ -21,7 +21,7 @@ function TabNavigation({ tabs, activeTab, onTabChange, className = "" }) {
           {count !== undefined && (
             <span className={`text-xs px-2 py-1 rounded-full ${
               activeTab === id 
-                ? 'bg-sage-100 text-sage-700' 
+                ? 'bg-primary-100 text-primary-700' 
                 : 'bg-gray-200 text-gray-600'
             }`}>
               {count}

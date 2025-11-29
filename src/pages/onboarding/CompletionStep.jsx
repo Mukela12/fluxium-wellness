@@ -84,11 +84,11 @@ function CompletionStep({ onComplete, userData }) {
         className="mb-8"
       >
         <h1 className="text-3xl font-bold text-gray-900 mb-4">
-          🎉 Welcome to WelldifyAI, {userData?.name?.split(' ')[0]}!
+          🎉 Welcome to Fluxium, {userData?.name?.split(' ')[0]}!
         </h1>
-        
+
         <p className="text-lg text-gray-600 mb-6">
-          You're all set up and ready to start your WelldifyAI wellness journey with us. 
+          You're all set up and ready to start your Fluxium wellness journey with us.
           Here's what you can expect in your first week:
         </p>
       </motion.div>
@@ -162,7 +162,7 @@ function CompletionStep({ onComplete, userData }) {
       >
         <h3 className="text-xl font-semibold text-gray-900 mb-4">Notification Preferences</h3>
         <p className="text-sm text-gray-600 mb-6">
-          Choose how you'd like to stay updated on your WelldifyAI journey
+          Choose how you'd like to stay updated on your Fluxium journey
         </p>
         
         <div className="bg-gray-50 rounded-xl p-6 space-y-4">
@@ -181,7 +181,7 @@ function CompletionStep({ onComplete, userData }) {
                 onChange={(e) => handlePreferenceChange('emailNotifications', e.target.checked)}
                 className="sr-only peer"
               />
-              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-sage-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-sage-600"></div>
+              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-600"></div>
             </label>
           </div>
 
@@ -200,7 +200,7 @@ function CompletionStep({ onComplete, userData }) {
                 onChange={(e) => handlePreferenceChange('reminders', e.target.checked)}
                 className="sr-only peer"
               />
-              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-sage-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-sage-600"></div>
+              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-600"></div>
             </label>
           </div>
 
@@ -219,7 +219,7 @@ function CompletionStep({ onComplete, userData }) {
                 onChange={(e) => handlePreferenceChange('weeklyReports', e.target.checked)}
                 className="sr-only peer"
               />
-              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-sage-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-sage-600"></div>
+              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-600"></div>
             </label>
           </div>
         </div>
@@ -230,10 +230,10 @@ function CompletionStep({ onComplete, userData }) {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1.0 }}
-        className="bg-gradient-to-r from-sage-50 to-green-50 rounded-xl p-6 mb-8"
+        className="bg-gradient-to-r from-primary-50 to-green-50 rounded-xl p-6 mb-8"
       >
         <div className="flex items-center justify-center mb-4">
-          <div className="w-12 h-12 bg-gradient-to-br from-sage-400 to-sage-600 rounded-full flex items-center justify-center mr-4">
+          <div className="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center mr-4">
             <GiftIcon size={24} className="text-white" />
           </div>
           <div>
@@ -243,8 +243,8 @@ function CompletionStep({ onComplete, userData }) {
         </div>
         <div className="text-center">
           <div className="inline-flex items-center px-4 py-2 bg-white rounded-full shadow-sm">
-            <HeartIcon size={16} className="text-sage-600 mr-2" />
-            <span className="font-semibold text-sage-600">50 Happy Coins</span>
+            <HeartIcon size={16} className="text-primary-600 mr-2" />
+            <span className="font-semibold text-primary-600">50 Happy Coins</span>
           </div>
         </div>
       </motion.div>

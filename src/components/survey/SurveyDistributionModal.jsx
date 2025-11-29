@@ -205,11 +205,11 @@ function SurveyDistributionModal({ isOpen, onClose, survey }) {
                   onClick={() => setRecipientType('all')}
                   className={`p-4 rounded-lg border-2 transition-all ${
                     recipientType === 'all'
-                      ? 'border-sage-500 bg-sage-50'
+                      ? 'border-primary-500 bg-primary-50'
                       : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
-                  <UserGroupIcon className="w-8 h-8 mx-auto mb-2 text-sage-600" />
+                  <UserGroupIcon className="w-8 h-8 mx-auto mb-2 text-primary-600" />
                   <p className="font-medium">All Employees</p>
                   <p className="text-sm text-gray-600">{users.filter(u => u.isActive).length} recipients</p>
                 </button>
@@ -218,11 +218,11 @@ function SurveyDistributionModal({ isOpen, onClose, survey }) {
                   onClick={() => setRecipientType('department')}
                   className={`p-4 rounded-lg border-2 transition-all ${
                     recipientType === 'department'
-                      ? 'border-sage-500 bg-sage-50'
+                      ? 'border-primary-500 bg-primary-50'
                       : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
-                  <BuildingOffice2Icon className="w-8 h-8 mx-auto mb-2 text-sage-600" />
+                  <BuildingOffice2Icon className="w-8 h-8 mx-auto mb-2 text-primary-600" />
                   <p className="font-medium">By Department</p>
                   <p className="text-sm text-gray-600">Select departments</p>
                 </button>
@@ -231,11 +231,11 @@ function SurveyDistributionModal({ isOpen, onClose, survey }) {
                   onClick={() => setRecipientType('individual')}
                   className={`p-4 rounded-lg border-2 transition-all ${
                     recipientType === 'individual'
-                      ? 'border-sage-500 bg-sage-50'
+                      ? 'border-primary-500 bg-primary-50'
                       : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
-                  <UserGroupIcon className="w-8 h-8 mx-auto mb-2 text-sage-600" />
+                  <UserGroupIcon className="w-8 h-8 mx-auto mb-2 text-primary-600" />
                   <p className="font-medium">Individual</p>
                   <p className="text-sm text-gray-600">Select specific users</p>
                 </button>
@@ -259,7 +259,7 @@ function SurveyDistributionModal({ isOpen, onClose, survey }) {
                             setSelectedDepartments(selectedDepartments.filter(d => d !== dept));
                           }
                         }}
-                        className="w-4 h-4 text-sage-600 rounded focus:ring-sage-300"
+                        className="w-4 h-4 text-primary-600 rounded focus:ring-primary-300"
                       />
                       <span className="font-medium">{dept}</span>
                       <span className="text-sm text-gray-600">
@@ -280,7 +280,7 @@ function SurveyDistributionModal({ isOpen, onClose, survey }) {
                       placeholder="Search users..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sage-500 focus:border-transparent"
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     />
                   </div>
                   
@@ -301,7 +301,7 @@ function SurveyDistributionModal({ isOpen, onClose, survey }) {
                                 setSelectedUsers(selectedUsers.filter(id => id !== user._id));
                               }
                             }}
-                            className="w-4 h-4 text-sage-600 rounded focus:ring-sage-300"
+                            className="w-4 h-4 text-primary-600 rounded focus:ring-primary-300"
                           />
                           <div>
                             <p className="font-medium">{user.name}</p>
@@ -331,7 +331,7 @@ function SurveyDistributionModal({ isOpen, onClose, survey }) {
                     name="schedule"
                     checked={schedule.type === 'immediate'}
                     onChange={() => setSchedule({ type: 'immediate', date: '', time: '' })}
-                    className="w-4 h-4 text-sage-600"
+                    className="w-4 h-4 text-primary-600"
                   />
                   <span className="font-medium">Send immediately</span>
                 </label>
@@ -342,7 +342,7 @@ function SurveyDistributionModal({ isOpen, onClose, survey }) {
                     name="schedule"
                     checked={schedule.type === 'scheduled'}
                     onChange={() => setSchedule({ ...schedule, type: 'scheduled' })}
-                    className="w-4 h-4 text-sage-600"
+                    className="w-4 h-4 text-primary-600"
                   />
                   <span className="font-medium">Schedule for later</span>
                 </label>
@@ -356,7 +356,7 @@ function SurveyDistributionModal({ isOpen, onClose, survey }) {
                         value={schedule.date}
                         onChange={(e) => setSchedule({ ...schedule, date: e.target.value })}
                         min={new Date().toISOString().split('T')[0]}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sage-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                       />
                     </div>
                     <div>
@@ -365,7 +365,7 @@ function SurveyDistributionModal({ isOpen, onClose, survey }) {
                         type="time"
                         value={schedule.time}
                         onChange={(e) => setSchedule({ ...schedule, time: e.target.value })}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sage-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                       />
                     </div>
                   </div>
@@ -413,7 +413,7 @@ function SurveyDistributionModal({ isOpen, onClose, survey }) {
               <button
                 onClick={handleDistribute}
                 disabled={loading || getRecipientCount() === 0}
-                className="px-6 py-2 bg-sage-600 text-white rounded-lg hover:bg-sage-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
+                className="px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
               >
                 {loading ? (
                   <>

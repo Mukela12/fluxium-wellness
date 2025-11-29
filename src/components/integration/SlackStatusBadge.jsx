@@ -22,15 +22,15 @@ function SlackStatusBadge({ isConnected, showLabel = true, size = 'sm' }) {
         <div className="relative">
           <MessageSquareIcon 
             size={iconSize[size]} 
-            className="text-sage-600"
+            className="text-primary-600"
           />
           <CheckCircle 
             size={iconSize[size] * 0.6} 
-            className="absolute -bottom-1 -right-1 text-sage-600 bg-white rounded-full"
+            className="absolute -bottom-1 -right-1 text-primary-600 bg-white rounded-full"
           />
         </div>
         {showLabel && (
-          <span className="text-sm text-sage-600 font-medium">
+          <span className="text-sm text-primary-600 font-medium">
             Slack Connected
           </span>
         )}

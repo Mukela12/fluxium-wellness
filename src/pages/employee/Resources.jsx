@@ -365,11 +365,11 @@ function Resources() {
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center space-x-3">
-                        <div className="p-2 bg-sage-100 rounded-lg">
-                          <TypeIcon size={20} className="text-sage-600" />
+                        <div className="p-2 bg-primary-100 rounded-lg">
+                          <TypeIcon size={20} className="text-primary-600" />
                         </div>
                         <div>
-                          <span className="text-xs font-medium text-sage-600 uppercase tracking-wide">
+                          <span className="text-xs font-medium text-primary-600 uppercase tracking-wide">
                             {resource.type}
                           </span>
                           <div className="text-xs text-gray-500">{resource.category}</div>
@@ -446,12 +446,12 @@ function Resources() {
                     </div>
                   </div>
                   
-                  <div className="px-6 py-3 bg-gray-50 border-t border-gray-100 group-hover:bg-sage-50 transition-colors">
+                  <div className="px-6 py-3 bg-gray-50 border-t border-gray-100 group-hover:bg-primary-50 transition-colors">
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-600">
                         {new Date(resource.createdAt).toLocaleDateString()}
                       </span>
-                      <div className="flex items-center text-sage-600 group-hover:text-sage-700">
+                      <div className="flex items-center text-primary-600 group-hover:text-primary-700">
                         <span className="mr-2">View Resource</span>
                         <ChevronRightIcon size={16} />
                       </div>

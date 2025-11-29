@@ -307,7 +307,7 @@ function UserManagementModal({ isOpen, onClose, user = null, onSave }) {
               id="isActive"
               checked={formData.isActive}
               onChange={(e) => handleChange('isActive', e.target.checked)}
-              className="h-4 w-4 text-sage-600 focus:ring-sage-500 border-gray-300 rounded"
+              className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
             />
             <label htmlFor="isActive" className="ml-2 block text-sm text-gray-700">
               Active user account

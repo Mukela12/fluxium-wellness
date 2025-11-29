@@ -54,7 +54,7 @@ function EmailVerificationPrompt() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sage-50 via-white to-green-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-green-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -142,7 +142,7 @@ function EmailVerificationPrompt() {
             <div className="mt-6 text-sm text-gray-500">
               <p>
                 Need help? Contact{' '}
-                <a href="mailto:support@wellnessai.com" className="text-sage-600 hover:text-sage-700 font-medium">
+                <a href="mailto:support@wellnessai.com" className="text-primary-600 hover:text-primary-700 font-medium">
                   support@wellnessai.com
                 </a>
               </p>
@@ -168,7 +168,7 @@ function EmailVerificationPrompt() {
 
       {/* Background Decorations */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-20 right-20 w-32 h-32 bg-sage-200 rounded-full opacity-20 blur-3xl" />
+        <div className="absolute top-20 right-20 w-32 h-32 bg-primary-200 rounded-full opacity-20 blur-3xl" />
         <div className="absolute bottom-20 left-20 w-40 h-40 bg-green-200 rounded-full opacity-20 blur-3xl" />
       </div>
     </div>

@@ -127,7 +127,7 @@ function ForgotPassword() {
       <div className="mb-8">
         <Link
           to="/login"
-          className="inline-flex items-center space-x-2 text-sage-600 hover:text-sage-500 transition-colors duration-200 mb-6"
+          className="inline-flex items-center space-x-2 text-primary-600 hover:text-primary-500 transition-colors duration-200 mb-6"
         >
           <ArrowLeftIcon size={20} />
           <span className="text-sm font-medium">Back to Sign In</span>
@@ -207,7 +207,7 @@ function ForgotPassword() {
           Remember your password?{' '}
           <Link
             to="/login"
-            className="font-medium text-sage-600 hover:text-sage-500 transition-colors duration-200"
+            className="font-medium text-primary-600 hover:text-primary-500 transition-colors duration-200"
           >
             Sign in here
           </Link>
@@ -215,12 +215,12 @@ function ForgotPassword() {
       </div>
 
       {/* Contact Support */}
-      <div className="mt-6 p-4 bg-sage-50 rounded-xl border border-sage-200">
+      <div className="mt-6 p-4 bg-primary-50 rounded-xl border border-primary-200">
         <div className="text-center">
-          <p className="text-sm text-sage-800 font-medium mb-1">
+          <p className="text-sm text-primary-800 font-medium mb-1">
             Need additional help?
           </p>
-          <p className="text-xs text-sage-600">
+          <p className="text-xs text-primary-600">
             Contact your HR department or IT administrator for assistance.
           </p>
         </div>

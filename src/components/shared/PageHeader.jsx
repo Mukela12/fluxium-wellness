@@ -13,7 +13,7 @@ function PageHeader({
   className = "" 
 }) {
   const headerClasses = gradient 
-    ? "bg-gradient-to-r from-sage-500 to-sage-600 text-white rounded-2xl p-8"
+    ? "bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-2xl p-8"
     : "text-center mb-8";
 
   return (
@@ -30,7 +30,7 @@ function PageHeader({
               <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
                 gradient 
                   ? 'bg-white bg-opacity-20 text-white' 
-                  : 'bg-sage-100 text-sage-600'
+                  : 'bg-primary-100 text-primary-600'
               }`}>
                 <Icon size={24} />
               </div>
@@ -43,7 +43,7 @@ function PageHeader({
           </div>
           {subtitle && (
             <p className={`text-lg ${
-              gradient ? 'text-sage-100' : 'text-gray-600'
+              gradient ? 'text-primary-100' : 'text-gray-600'
             }`}>
               {subtitle}
             </p>

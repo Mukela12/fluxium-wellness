@@ -289,7 +289,7 @@ function HRAnalytics() {
                         {employee.lastCheckIn ? new Date(employee.lastCheckIn).toLocaleDateString() : 'Never'}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                        <button className="text-sage-600 hover:text-sage-900">
+                        <button className="text-primary-600 hover:text-primary-900">
                           View Details
                         </button>
                       </td>
@@ -369,7 +369,7 @@ function HRAnalytics() {
                 <div className="space-y-2">
                   {engagementMetrics.details.recentActivity?.map((activity, index) => (
                     <div key={index} className="flex items-start space-x-2 p-2 bg-gray-50 rounded">
-                      <div className="w-2 h-2 bg-sage-500 rounded-full mt-2"></div>
+                      <div className="w-2 h-2 bg-primary-500 rounded-full mt-2"></div>
                       <div className="flex-1">
                         <p className="text-sm text-gray-900">{activity.description}</p>
                         <p className="text-xs text-gray-500">{new Date(activity.timestamp).toLocaleString()}</p>

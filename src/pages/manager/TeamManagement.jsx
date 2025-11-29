@@ -143,7 +143,7 @@ function TeamManagement() {
                     <tr key={member.id}>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center">
-                          <div className="w-10 h-10 bg-gradient-to-br from-sage-400 to-sage-600 rounded-full flex items-center justify-center text-white font-medium">
+                          <div className="w-10 h-10 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center text-white font-medium">
                             {member.name?.charAt(0)?.toUpperCase() || 'U'}
                           </div>
                           <div className="ml-4">
@@ -174,7 +174,7 @@ function TeamManagement() {
                         </span>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                        <button className="text-sage-600 hover:text-sage-900">
+                        <button className="text-primary-600 hover:text-primary-900">
                           <EyeIcon size={16} />
                         </button>
                       </td>
@@ -253,7 +253,7 @@ function TeamManagement() {
               {moodTrend.recentChanges.map((change, index) => (
                 <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-sage-400 to-sage-600 rounded-full flex items-center justify-center text-white text-sm font-medium">
+                    <div className="w-8 h-8 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center text-white text-sm font-medium">
                       {change.employee?.charAt(0)?.toUpperCase() || 'U'}
                     </div>
                     <div>
@@ -503,9 +503,9 @@ function TeamManagement() {
           {engagementMetrics.topPerformers?.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {engagementMetrics.topPerformers.map((performer, index) => (
-                <div key={performer.id} className="p-4 bg-gradient-to-br from-sage-50 to-sage-100 rounded-lg">
+                <div key={performer.id} className="p-4 bg-gradient-to-br from-primary-50 to-primary-100 rounded-lg">
                   <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-sage-400 to-sage-600 rounded-full flex items-center justify-center text-white font-medium">
+                    <div className="w-10 h-10 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center text-white font-medium">
                       {performer.name?.charAt(0)?.toUpperCase() || 'U'}
                     </div>
                     <div>
@@ -524,7 +524,7 @@ function TeamManagement() {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-600">Coins:</span>
-                      <span className="font-medium text-sage-600">{performer.coins}</span>
+                      <span className="font-medium text-primary-600">{performer.coins}</span>
                     </div>
                   </div>
                 </div>

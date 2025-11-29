@@ -195,12 +195,12 @@ function Register() {
             Registration Successful! 🎉
           </h2>
           <p className="text-lg text-gray-700 mb-2">
-            Welcome to WelldifyAI!
+            Welcome to Fluxium!
           </p>
           <p className="text-gray-600 mb-6">
             We've sent a verification email to:
           </p>
-          <p className="text-lg font-semibold text-sage-600 mb-8">
+          <p className="text-lg font-semibold text-primary-600 mb-8">
             {userEmail}
           </p>
         </div>
@@ -251,7 +251,7 @@ function Register() {
       {/* Header */}
       <div className="mb-8 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-2">
-          Join WelldifyAI
+          Join Fluxium
         </h2>
         <p className="text-gray-600">
           Create your account to start your wellness journey
@@ -488,7 +488,7 @@ function Register() {
           Already have an account?{' '}
           <Link
             to="/login"
-            className="font-medium text-sage-600 hover:text-sage-500 transition-colors duration-200"
+            className="font-medium text-primary-600 hover:text-primary-500 transition-colors duration-200"
           >
             Sign in here
           </Link>

@@ -280,7 +280,7 @@ function HRDashboard() {
           <h2 className="text-xl font-semibold text-gray-900">Department Overview</h2>
           <Link 
             to="/hr/analytics" 
-            className="text-sage-600 hover:text-sage-700 text-sm font-medium flex items-center space-x-1"
+            className="text-primary-600 hover:text-primary-700 text-sm font-medium flex items-center space-x-1"
           >
             <span>View detailed analytics</span>
             <ChevronRightIcon size={16} />
@@ -336,7 +336,7 @@ function HRDashboard() {
           <h2 className="text-xl font-semibold text-gray-900">Recent Activity</h2>
           <Link 
             to="/hr/analytics" 
-            className="text-sage-600 hover:text-sage-700 text-sm font-medium flex items-center space-x-1"
+            className="text-primary-600 hover:text-primary-700 text-sm font-medium flex items-center space-x-1"
           >
             <span>View all</span>
             <ChevronRightIcon size={16} />

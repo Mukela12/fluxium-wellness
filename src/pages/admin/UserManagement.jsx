@@ -318,7 +318,7 @@ function UserManagement() {
 
         {/* Bulk Actions */}
         {selectedUsers.length > 0 && (
-          <div className="flex items-center justify-between p-4 bg-sage-50 rounded-lg mb-4">
+          <div className="flex items-center justify-between p-4 bg-primary-50 rounded-lg mb-4">
             <span className="text-sm text-gray-600">
               {selectedUsers.length} user(s) selected
             </span>
@@ -358,7 +358,7 @@ function UserManagement() {
                     type="checkbox"
                     checked={selectedUsers.length === users.length && users.length > 0}
                     onChange={handleSelectAll}
-                    className="h-4 w-4 text-sage-600 focus:ring-sage-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
                   />
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -389,12 +389,12 @@ function UserManagement() {
                       type="checkbox"
                       checked={selectedUsers.includes(user._id)}
                       onChange={() => handleSelectUser(user._id)}
-                      className="h-4 w-4 text-sage-600 focus:ring-sage-500 border-gray-300 rounded"
+                      className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
                     />
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-br from-sage-400 to-sage-600 rounded-full flex items-center justify-center text-white font-medium">
+                      <div className="w-10 h-10 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center text-white font-medium">
                         {user.name.charAt(0).toUpperCase()}
                       </div>
                       <div className="ml-4">
@@ -448,7 +448,7 @@ function UserManagement() {
                     <div className="flex space-x-2">
                       <button
                         onClick={() => handleEditUser(user)}
-                        className="text-sage-600 hover:text-sage-900"
+                        className="text-primary-600 hover:text-primary-900"
                       >
                         <EditIcon size={16} />
                       </button>

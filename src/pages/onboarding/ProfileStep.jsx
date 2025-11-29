@@ -105,7 +105,7 @@ function ProfileStep({ onNext, onBack, userData, onUpdateData }) {
         {/* Avatar Upload */}
         <div className="flex justify-center mb-8">
           <div className="relative">
-            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-sage-400 to-sage-600 flex items-center justify-center overflow-hidden">
+            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center overflow-hidden">
               {formData.avatar ? (
                 <img 
                   src={formData.avatar} 

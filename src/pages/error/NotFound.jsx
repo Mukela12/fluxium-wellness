@@ -8,7 +8,7 @@ function NotFound() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sage-50 to-sage-100 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 to-primary-100 flex items-center justify-center px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -22,10 +22,10 @@ function NotFound() {
           transition={{ delay: 0.2, type: 'spring', stiffness: 100 }}
           className="mb-8"
         >
-          <div className="w-32 h-32 bg-sage-200 rounded-full flex items-center justify-center mx-auto mb-6">
-            <SearchIcon size={48} className="text-sage-600" />
+          <div className="w-32 h-32 bg-primary-200 rounded-full flex items-center justify-center mx-auto mb-6">
+            <SearchIcon size={48} className="text-primary-600" />
           </div>
-          <div className="text-8xl font-bold text-sage-300 mb-4">404</div>
+          <div className="text-8xl font-bold text-primary-300 mb-4">404</div>
         </motion.div>
 
         {/* Error Content */}
@@ -84,10 +84,10 @@ function NotFound() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="absolute inset-0 pointer-events-none overflow-hidden"
         >
-          <div className="absolute top-20 left-10 w-4 h-4 bg-sage-300 rounded-full opacity-20"></div>
-          <div className="absolute top-40 right-16 w-6 h-6 bg-sage-400 rounded-full opacity-15"></div>
-          <div className="absolute bottom-32 left-20 w-3 h-3 bg-sage-500 rounded-full opacity-25"></div>
-          <div className="absolute bottom-20 right-12 w-5 h-5 bg-sage-300 rounded-full opacity-10"></div>
+          <div className="absolute top-20 left-10 w-4 h-4 bg-primary-300 rounded-full opacity-20"></div>
+          <div className="absolute top-40 right-16 w-6 h-6 bg-primary-400 rounded-full opacity-15"></div>
+          <div className="absolute bottom-32 left-20 w-3 h-3 bg-primary-500 rounded-full opacity-25"></div>
+          <div className="absolute bottom-20 right-12 w-5 h-5 bg-primary-300 rounded-full opacity-10"></div>
         </motion.div>
       </motion.div>
     </div>

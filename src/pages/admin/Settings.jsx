@@ -130,7 +130,7 @@ function AdminSettings() {
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
                       <button 
                         onClick={() => setEditingItem(survey)}
-                        className="text-sage-600 hover:text-sage-900"
+                        className="text-primary-600 hover:text-primary-900"
                       >
                         <EditIcon size={16} />
                       </button>
@@ -194,7 +194,7 @@ function AdminSettings() {
                       {reward.description}
                     </p>
                     <div className="flex items-center space-x-4 text-sm">
-                      <span className="font-medium text-sage-600">
+                      <span className="font-medium text-primary-600">
                         {reward.coinsRequired} coins
                       </span>
                       <span className={`px-2 py-1 rounded-full text-xs ${
@@ -209,7 +209,7 @@ function AdminSettings() {
                   <div className="flex space-x-2">
                     <button 
                       onClick={() => setEditingItem(reward)}
-                      className="text-sage-600 hover:text-sage-900 p-1"
+                      className="text-primary-600 hover:text-primary-900 p-1"
                     >
                       <EditIcon size={16} />
                     </button>
@@ -285,14 +285,14 @@ function AdminSettings() {
                       </div>
                       <div>
                         <span className="text-gray-500">Reward:</span>
-                        <span className="ml-1 font-medium text-sage-600">{challenge.reward} coins</span>
+                        <span className="ml-1 font-medium text-primary-600">{challenge.reward} coins</span>
                       </div>
                     </div>
                   </div>
                   <div className="flex space-x-2">
                     <button 
                       onClick={() => setEditingItem(challenge)}
-                      className="text-sage-600 hover:text-sage-900 p-1"
+                      className="text-primary-600 hover:text-primary-900 p-1"
                     >
                       <EditIcon size={16} />
                     </button>

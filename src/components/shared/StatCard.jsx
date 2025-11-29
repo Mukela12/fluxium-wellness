@@ -24,7 +24,7 @@ function StatCard({
     >
       <div className="flex items-center justify-between mb-4">
         <h3 className="font-semibold text-gray-900">{title}</h3>
-        {Icon && <Icon size={20} className="text-sage-600" />}
+        {Icon && <Icon size={20} className="text-primary-600" />}
       </div>
       
       <div className="stats-value">{value}</div>

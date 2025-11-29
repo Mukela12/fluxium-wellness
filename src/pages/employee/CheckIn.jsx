@@ -200,7 +200,7 @@ function CheckIn() {
         className="max-w-2xl mx-auto"
       >
         <PageHeader
-          title="Daily WelldifyAI Check-in"
+          title="Daily Wellness Check-in"
           subtitle="Loading your check-in status..."
           icon={HeartIcon}
         />
@@ -256,7 +256,7 @@ function CheckIn() {
 
         <div className="card-primary">
           <div className="flex items-center space-x-4">
-            <div className="w-12 h-12 bg-sage-100 rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
               <span className="text-2xl">🎉</span>
             </div>
             <div>
@@ -268,7 +268,7 @@ function CheckIn() {
               </p>
             </div>
             <div className="ml-auto">
-              <span className="text-2xl font-bold text-sage-600">+75</span>
+              <span className="text-2xl font-bold text-primary-600">+75</span>
             </div>
           </div>
         </div>
@@ -279,7 +279,7 @@ function CheckIn() {
               Next Check-in Available In
             </h3>
             {timeUntilNext && (
-              <div className="bg-gradient-to-r from-sage-500 to-sage-600 text-white rounded-xl p-6">
+              <div className="bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl p-6">
                 <div className="text-4xl font-bold font-mono mb-2">
                   {formatTime(timeUntilNext)}
                 </div>
@@ -305,7 +305,7 @@ function CheckIn() {
       className="max-w-2xl mx-auto"
     >
       <PageHeader
-        title="Daily WelldifyAI Check-in"
+        title="Daily Wellness Check-in"
         subtitle="How are you feeling today? Share your mood and earn Happy Coins!"
         icon={HeartIcon}
       />
@@ -362,7 +362,7 @@ function CheckIn() {
         <div className="card-glass">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-sage-100 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
                 <span className="text-2xl">🪙</span>
               </div>
               <div>

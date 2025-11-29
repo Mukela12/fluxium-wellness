@@ -121,10 +121,8 @@ function MobileNav({ isOpen, onClose, navigationItems, currentPath }) {
             <div className="p-6">
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-sage-300 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">W</span>
-                  </div>
-                  <span className="text-xl font-bold text-gray-900">WelldifyAI</span>
+                  <img src="/fluxium-logo.svg" alt="Fluxium" className="w-8 h-8" />
+                  <span className="text-xl font-bold text-gray-900">Fluxium</span>
                 </div>
                 <button
                   onClick={onClose}
@@ -147,7 +145,7 @@ function MobileNav({ isOpen, onClose, navigationItems, currentPath }) {
                       className={cn(
                         'flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors duration-200 relative',
                         isActive
-                          ? 'bg-sage-100 text-sage-700'
+                          ? 'bg-primary-100 text-primary-700'
                           : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
                       )}
                     >
@@ -204,10 +202,8 @@ function Header({ onMenuClick, user }) {
             </motion.button>
             
             <div className="flex items-center space-x-3 lg:hidden">
-              <div className="w-9 h-9 bg-gradient-to-br from-sage-400 to-sage-600 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-sm">W</span>
-              </div>
-              <span className="text-xl font-bold gradient-text">WelldifyAI</span>
+              <img src="/fluxium-logo.svg" alt="Fluxium" className="w-9 h-9" />
+              <span className="text-xl font-bold gradient-text">Fluxium</span>
             </div>
           </div>
 
@@ -222,10 +218,10 @@ function Header({ onMenuClick, user }) {
             <div className="flex items-center space-x-3">
               <div className="hidden sm:block text-right">
                 <p className="text-sm font-semibold text-gray-900">{user?.name}</p>
-                <p className="text-xs text-sage-600 capitalize font-medium">{user?.role}</p>
+                <p className="text-xs text-primary-600 capitalize font-medium">{user?.role}</p>
               </div>
-              <motion.div 
-                className="w-10 h-10 bg-gradient-to-br from-sage-400 to-sage-600 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg cursor-pointer"
+              <motion.div
+                className="w-10 h-10 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg cursor-pointer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -259,14 +255,12 @@ function Sidebar({ navigationItems, currentPath }) {
       {/* Logo */}
       <div className="flex-shrink-0 flex items-center px-6 py-4 border-b border-gray-200/50">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-sage-400 to-sage-600 rounded-xl flex items-center justify-center shadow-lg">
-            <span className="text-white font-bold text-sm">W</span>
-          </div>
+          <img src="/fluxium-logo.svg" alt="Fluxium" className="w-10 h-10" />
           <div>
-            <h1 className="text-lg font-bold gradient-text">WelldifyAI</h1>
+            <h1 className="text-lg font-bold gradient-text">Fluxium</h1>
             <p className="text-xs text-gray-500 font-medium">
-              {user?.role === 'admin' ? 'Admin Portal' : 
-               user?.role === 'hr' ? 'HR Portal' : 
+              {user?.role === 'admin' ? 'Admin Portal' :
+               user?.role === 'hr' ? 'HR Portal' :
                'Employee Portal'}
             </p>
           </div>
@@ -276,19 +270,19 @@ function Sidebar({ navigationItems, currentPath }) {
       {/* User info */}
       <div className="flex-shrink-0 px-6 py-4 border-b border-gray-200/50">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-sage-400 to-sage-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg text-sm">
+          <div className="w-10 h-10 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg text-sm">
             {user?.name?.charAt(0)}
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-sm font-semibold text-gray-900 truncate">{user?.name}</p>
-            <p className="text-xs text-sage-600 capitalize font-medium">{user?.role}</p>
+            <p className="text-xs text-primary-600 capitalize font-medium">{user?.role}</p>
           </div>
         </div>
         
         {/* Happy Coins Display */}
-        <div className="mt-3 flex items-center justify-between px-3 py-2 bg-gradient-to-r from-sage-50 to-sage-100 rounded-lg border border-sage-200/50">
+        <div className="mt-3 flex items-center justify-between px-3 py-2 bg-gradient-to-r from-primary-50 to-primary-100 rounded-lg border border-primary-200/50">
           <span className="text-xs font-semibold text-gray-700">Happy Coins</span>
-          <span className="text-xs font-bold text-sage-600 flex items-center space-x-1">
+          <span className="text-xs font-bold text-primary-600 flex items-center space-x-1">
             <span>🪙</span>
             <span>{user?.wellness?.happyCoins || 0}</span>
           </span>
@@ -308,15 +302,15 @@ function Sidebar({ navigationItems, currentPath }) {
               className={cn(
                 'group flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 relative',
                 isActive
-                  ? 'bg-gradient-to-r from-sage-100 to-sage-200 text-sage-700 shadow-sm'
+                  ? 'bg-gradient-to-r from-primary-100 to-primary-200 text-primary-700 shadow-sm'
                   : 'text-gray-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 hover:text-gray-900'
               )}
             >
-              <item.icon 
-                size={18} 
+              <item.icon
+                size={18}
                 className={cn(
                   'mr-3 flex-shrink-0',
-                  isActive ? 'text-sage-700' : 'text-gray-400 group-hover:text-gray-500'
+                  isActive ? 'text-primary-700' : 'text-gray-400 group-hover:text-gray-500'
                 )} 
               />
               <span className="truncate">{item.name}</span>

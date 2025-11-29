@@ -76,9 +76,9 @@ function EmptyState({
       </motion.div>
       
       {/* Decorative elements */}
-      <div className="absolute top-4 left-4 w-2 h-2 bg-sage-300 rounded-full opacity-30"></div>
-      <div className="absolute top-8 right-6 w-1 h-1 bg-sage-400 rounded-full opacity-40"></div>
-      <div className="absolute bottom-6 left-8 w-1.5 h-1.5 bg-sage-200 rounded-full opacity-50"></div>
+      <div className="absolute top-4 left-4 w-2 h-2 bg-primary-300 rounded-full opacity-30"></div>
+      <div className="absolute top-8 right-6 w-1 h-1 bg-primary-400 rounded-full opacity-40"></div>
+      <div className="absolute bottom-6 left-8 w-1.5 h-1.5 bg-primary-200 rounded-full opacity-50"></div>
     </motion.div>
   );
 }

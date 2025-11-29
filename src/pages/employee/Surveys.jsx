@@ -189,7 +189,7 @@ function Surveys() {
                       {question.options.map((option, optionIndex) => (
                         <label
                           key={option.id || option.text || option || optionIndex}
-                          className="flex items-start space-x-4 cursor-pointer p-4 rounded-lg border-2 border-gray-100 hover:border-sage-200 hover:bg-sage-50 transition-all duration-200"
+                          className="flex items-start space-x-4 cursor-pointer p-4 rounded-lg border-2 border-gray-100 hover:border-primary-200 hover:bg-primary-50 transition-all duration-200"
                         >
                           <input
                             type="radio"
@@ -197,7 +197,7 @@ function Surveys() {
                             value={option.text || option}
                             checked={responses[question._id || question.id] === (option.text || option)}
                             onChange={(e) => handleResponseChange(question._id || question.id, e.target.value)}
-                            className="w-5 h-5 text-sage-500 focus:ring-sage-300 focus:ring-2 mt-0.5"
+                            className="w-5 h-5 text-primary-500 focus:ring-primary-300 focus:ring-2 mt-0.5"
                           />
                           <div className="flex-1">
                             <span className="text-gray-800 font-medium leading-relaxed">
@@ -217,9 +217,9 @@ function Surveys() {
                   )}
                   {question.options && question.options.length > 0 && (
                     <div className="text-center mt-4">
-                      <div className="inline-flex items-center space-x-2 bg-sage-50 px-4 py-2 rounded-lg">
-                        <span className="text-sm font-medium text-sage-700">Selected:</span>
-                        <span className="text-sm font-bold text-sage-800">
+                      <div className="inline-flex items-center space-x-2 bg-primary-50 px-4 py-2 rounded-lg">
+                        <span className="text-sm font-medium text-primary-700">Selected:</span>
+                        <span className="text-sm font-bold text-primary-800">
                           {responses[question._id || question.id] || 'None'}
                         </span>
                       </div>
@@ -244,7 +244,7 @@ function Surveys() {
                     }, (_, i) => (question.scale?.min || 0) + i).map((value) => (
                       <label
                         key={value}
-                        className="flex flex-col items-center cursor-pointer p-3 rounded-lg hover:bg-sage-50 transition-all duration-200 min-w-[60px]"
+                        className="flex flex-col items-center cursor-pointer p-3 rounded-lg hover:bg-primary-50 transition-all duration-200 min-w-[60px]"
                       >
                         <input
                           type="radio"
@@ -252,7 +252,7 @@ function Surveys() {
                           value={value.toString()}
                           checked={responses[question._id || question.id] === value.toString()}
                           onChange={(e) => handleResponseChange(question._id || question.id, e.target.value)}
-                          className="mb-3 w-5 h-5 text-sage-500 focus:ring-sage-300 focus:ring-2"
+                          className="mb-3 w-5 h-5 text-primary-500 focus:ring-primary-300 focus:ring-2"
                         />
                         <span className="text-sm font-semibold text-gray-800 bg-white border-2 border-gray-200 rounded-full w-8 h-8 flex items-center justify-center">
                           {value}
@@ -267,9 +267,9 @@ function Surveys() {
                   </div>
                   
                   <div className="text-center">
-                    <div className="inline-flex items-center space-x-2 bg-sage-50 px-4 py-2 rounded-lg">
-                      <span className="text-sm font-medium text-sage-700">Selected:</span>
-                      <span className="text-sm font-bold text-sage-800">
+                    <div className="inline-flex items-center space-x-2 bg-primary-50 px-4 py-2 rounded-lg">
+                      <span className="text-sm font-medium text-primary-700">Selected:</span>
+                      <span className="text-sm font-bold text-primary-800">
                         {responses[question._id || question.id] || 'None'}
                       </span>
                     </div>
@@ -302,9 +302,9 @@ function Surveys() {
                     </label>
                   </div>
                   <div className="text-center">
-                    <div className="inline-flex items-center space-x-2 bg-sage-50 px-4 py-2 rounded-lg">
-                      <span className="text-sm font-medium text-sage-700">Selected:</span>
-                      <span className="text-sm font-bold text-sage-800">
+                    <div className="inline-flex items-center space-x-2 bg-primary-50 px-4 py-2 rounded-lg">
+                      <span className="text-sm font-medium text-primary-700">Selected:</span>
+                      <span className="text-sm font-bold text-primary-800">
                         {responses[question._id || question.id] === 'true' ? 'Yes' : 
                          responses[question._id || question.id] === 'false' ? 'No' : 'None'}
                       </span>
@@ -317,7 +317,7 @@ function Surveys() {
                     value={responses[question._id || question.id] || ''}
                     onChange={(e) => handleResponseChange(question._id || question.id, e.target.value)}
                     placeholder="Please share your thoughts..."
-                    className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-sage-400 focus:ring-2 focus:ring-sage-200 transition-all duration-200 resize-none"
+                    className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-primary-400 focus:ring-2 focus:ring-primary-200 transition-all duration-200 resize-none"
                     rows={4}
                     maxLength={1000}
                   />
@@ -446,7 +446,7 @@ function Surveys() {
                   )}
                   
                   {survey.reward_coins > 0 && (
-                    <div className="flex items-center space-x-1 text-sm text-sage-600 font-medium">
+                    <div className="flex items-center space-x-1 text-sm text-primary-600 font-medium">
                       <span>🪙</span>
                       <span>+{survey.reward_coins} coins</span>
                     </div>

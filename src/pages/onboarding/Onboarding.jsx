@@ -117,7 +117,7 @@ function Onboarding() {
         // Update user's onboarding status in auth store
         completeOnboarding();
 
-        toast.success('Onboarding completed successfully! Welcome to WelldifyAI!', 'Welcome!');
+        toast.success('Onboarding completed successfully! Welcome to Fluxium!', 'Welcome!');
         
         // Navigate to dashboard
         navigate('/dashboard', { replace: true });
@@ -175,7 +175,7 @@ function Onboarding() {
                   onClick={() => handleResponse(question.id, num)}
                   className={`p-3 rounded-lg border text-center ${
                     value === num
-                      ? 'bg-sage-600 text-white border-sage-600'
+                      ? 'bg-primary-600 text-white border-primary-600'
                       : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                   }`}
                 >
@@ -229,7 +229,7 @@ function Onboarding() {
                     disabled={!canSelect}
                     className={`p-3 text-sm rounded-lg border text-left ${
                       isSelected
-                        ? 'bg-sage-600 text-white border-sage-600'
+                        ? 'bg-primary-600 text-white border-primary-600'
                         : canSelect
                         ? 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                         : 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'
@@ -253,13 +253,13 @@ function Onboarding() {
   const isLastSection = currentSection === sections.length - 1;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sage-50 via-white to-green-50">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-green-50">
       {/* Progress Bar */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center space-x-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-sage-400 to-sage-600 rounded-full flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center">
                 <span className="text-white font-semibold text-sm">
                   {currentSection + 1}
                 </span>
@@ -284,7 +284,7 @@ function Onboarding() {
           {/* Progress Bar */}
           <div className="w-full bg-gray-200 rounded-full h-1.5">
             <motion.div
-              className="bg-gradient-to-r from-sage-500 to-green-500 h-1.5 rounded-full"
+              className="bg-gradient-to-r from-primary-500 to-green-500 h-1.5 rounded-full"
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.5, ease: "easeOut" }}
@@ -342,7 +342,7 @@ function Onboarding() {
                     className={`flex items-center space-x-2 px-6 py-2 rounded-lg ${
                       !isCurrentSectionComplete() || submitting
                         ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                        : 'bg-sage-600 text-white hover:bg-sage-700'
+                        : 'bg-primary-600 text-white hover:bg-primary-700'
                     }`}
                   >
                     {submitting ? (
@@ -362,7 +362,7 @@ function Onboarding() {
                     className={`flex items-center space-x-2 px-4 py-2 rounded-lg ${
                       !isCurrentSectionComplete()
                         ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                        : 'bg-sage-600 text-white hover:bg-sage-700'
+                        : 'bg-primary-600 text-white hover:bg-primary-700'
                     }`}
                   >
                     <span>Next</span>
