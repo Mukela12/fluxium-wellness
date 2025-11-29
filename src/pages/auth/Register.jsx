@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate, Link } from 'react-router-dom';
 import { MailIcon, LockIcon, UserIcon, BuildingIcon, EyeIcon, EyeOffIcon, CheckCircleIcon } from 'lucide-react';
@@ -38,6 +38,33 @@ function Register() {
 
   // Debug: Log when component renders
   console.log('🔄 Register component rendering - registrationSuccess:', registrationSuccess);
+
+  // SessionStorage keys
+  const REGISTRATION_SUCCESS_KEY = 'registration_success';
+  const REGISTRATION_EMAIL_KEY = 'registration_email';
+
+  // On component mount, check if we should show success screen
+  useEffect(() => {
+    const savedSuccess = sessionStorage.getItem(REGISTRATION_SUCCESS_KEY);
+    const savedEmail = sessionStorage.getItem(REGISTRATION_EMAIL_KEY);
+
+    console.log('📦 Checking sessionStorage - success:', savedSuccess, 'email:', savedEmail);
+
+    if (savedSuccess === 'true' && savedEmail) {
+      console.log('✅ Restoring success state from sessionStorage');
+      setRegistrationSuccess(true);
+      setUserEmail(savedEmail);
+    }
+  }, []);
+
+  // Cleanup: Clear sessionStorage when component unmounts or when navigating away
+  useEffect(() => {
+    return () => {
+      console.log('🧹 Cleaning up sessionStorage on unmount');
+      sessionStorage.removeItem(REGISTRATION_SUCCESS_KEY);
+      sessionStorage.removeItem(REGISTRATION_EMAIL_KEY);
+    };
+  }, []);
 
   // Handle input changes
   const handleChange = (e) => {
@@ -141,6 +168,11 @@ function Register() {
         setUserEmail(formData.email);
         console.log('📧 Email stored:', formData.email);
 
+        // Save to sessionStorage to persist across re-renders
+        sessionStorage.setItem(REGISTRATION_SUCCESS_KEY, 'true');
+        sessionStorage.setItem(REGISTRATION_EMAIL_KEY, formData.email);
+        console.log('💾 Saved to sessionStorage');
+
         // Show success state
         setRegistrationSuccess(true);
         console.log('✅ registrationSuccess state set to true');
@@ -163,6 +195,9 @@ function Register() {
         console.log('⏱️ Setting 5-second timer for redirect...');
         setTimeout(() => {
           console.log('🚀 Navigating to login page...');
+          // Clear sessionStorage before navigating
+          sessionStorage.removeItem(REGISTRATION_SUCCESS_KEY);
+          sessionStorage.removeItem(REGISTRATION_EMAIL_KEY);
           navigate('/login', { replace: true });
         }, 5000);
       } else {
@@ -255,7 +290,12 @@ function Register() {
             Redirecting to login page in a few seconds...
           </p>
           <motion.button
-            onClick={() => navigate('/login', { replace: true })}
+            onClick={() => {
+              // Clear sessionStorage before navigating
+              sessionStorage.removeItem(REGISTRATION_SUCCESS_KEY);
+              sessionStorage.removeItem(REGISTRATION_EMAIL_KEY);
+              navigate('/login', { replace: true });
+            }}
             className="btn-primary"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
