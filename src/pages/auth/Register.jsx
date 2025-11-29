@@ -19,7 +19,7 @@ function Register() {
   const navigate = useNavigate();
   const { register, isLoading, error, clearError } = useAuthStore();
   const { toast } = useToast();
-  
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -29,12 +29,15 @@ function Register() {
     department: '',
     role: '',
   });
-  
+
   const [formErrors, setFormErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [registrationSuccess, setRegistrationSuccess] = useState(false);
   const [userEmail, setUserEmail] = useState('');
+
+  // Debug: Log when component renders
+  console.log('🔄 Register component rendering - registrationSuccess:', registrationSuccess);
 
   // Handle input changes
   const handleChange = (e) => {
@@ -129,13 +132,18 @@ function Register() {
 
       // Debug logging
       console.log('📝 Registration result:', result);
+      console.log('📝 Registration result.success:', result?.success);
 
       if (result?.success) {
+        console.log('✅ Registration successful! Setting success state...');
+
         // Store the email for the success message
         setUserEmail(formData.email);
+        console.log('📧 Email stored:', formData.email);
 
         // Show success state
         setRegistrationSuccess(true);
+        console.log('✅ registrationSuccess state set to true');
 
         // Clear form and errors
         setFormData({
@@ -149,9 +157,12 @@ function Register() {
           phone: ''
         });
         clearError();
+        console.log('🧹 Form cleared');
 
         // Auto-redirect to login after 5 seconds
+        console.log('⏱️ Setting 5-second timer for redirect...');
         setTimeout(() => {
+          console.log('🚀 Navigating to login page...');
           navigate('/login', { replace: true });
         }, 5000);
       } else {
@@ -186,6 +197,9 @@ function Register() {
 
   // Show success message if registration is complete
   if (registrationSuccess) {
+    console.log('🎉 SUCCESS SCREEN RENDERING - registrationSuccess:', registrationSuccess);
+    console.log('📧 SUCCESS SCREEN - userEmail:', userEmail);
+
     return (
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}

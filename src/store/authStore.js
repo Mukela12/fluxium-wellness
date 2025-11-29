@@ -97,6 +97,9 @@ const useAuthStore = create(
 
           // Debug logging to see actual response structure
           console.log('📝 Registration response:', response);
+          console.log('📝 Registration response.success:', response?.success);
+          console.log('📝 Registration response.data:', response?.data);
+          console.log('📝 Registration response.user:', response?.user);
 
           // More robust success detection
           // Check multiple conditions: explicit success flag, presence of user data, or data object
