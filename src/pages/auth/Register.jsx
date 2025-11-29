@@ -45,8 +45,8 @@ function Register() {
   const REGISTRATION_TIMESTAMP_KEY = 'registration_timestamp';
   const SESSION_EXPIRY_MS = 5 * 60 * 1000; // 5 minutes
 
-  // On component mount, check if we should show success screen
-  useEffect(() => {
+  // Check sessionStorage on EVERY render to determine if we should show success screen
+  const checkSessionStorage = () => {
     const savedSuccess = sessionStorage.getItem(REGISTRATION_SUCCESS_KEY);
     const savedEmail = sessionStorage.getItem(REGISTRATION_EMAIL_KEY);
     const savedTimestamp = sessionStorage.getItem(REGISTRATION_TIMESTAMP_KEY);
@@ -60,11 +60,10 @@ function Register() {
 
       console.log('⏰ Session age:', age, 'ms (expires at', SESSION_EXPIRY_MS, 'ms)');
 
-      // Only restore if less than 5 minutes old
+      // Only show success if less than 5 minutes old
       if (age < SESSION_EXPIRY_MS) {
-        console.log('✅ Restoring success state from sessionStorage');
-        setRegistrationSuccess(true);
-        setUserEmail(savedEmail);
+        console.log('✅ Valid session found, showing success screen');
+        return { shouldShowSuccess: true, email: savedEmail };
       } else {
         console.log('⏰ Session expired, clearing stale data');
         sessionStorage.removeItem(REGISTRATION_SUCCESS_KEY);
@@ -72,7 +71,12 @@ function Register() {
         sessionStorage.removeItem(REGISTRATION_TIMESTAMP_KEY);
       }
     }
-  }, []);
+
+    return { shouldShowSuccess: false, email: '' };
+  };
+
+  // Check sessionStorage every render
+  const sessionCheck = checkSessionStorage();
 
   // Handle input changes
   const handleChange = (e) => {
@@ -241,10 +245,13 @@ function Register() {
     'admin'
   ];
 
-  // Show success message if registration is complete
-  if (registrationSuccess) {
-    console.log('🎉 SUCCESS SCREEN RENDERING - registrationSuccess:', registrationSuccess);
-    console.log('📧 SUCCESS SCREEN - userEmail:', userEmail);
+  // Show success message if registration is complete (check both state and sessionStorage)
+  const shouldShowSuccessScreen = registrationSuccess || sessionCheck.shouldShowSuccess;
+  const displayEmail = userEmail || sessionCheck.email;
+
+  if (shouldShowSuccessScreen) {
+    console.log('🎉 SUCCESS SCREEN RENDERING - registrationSuccess:', registrationSuccess, 'sessionCheck:', sessionCheck.shouldShowSuccess);
+    console.log('📧 SUCCESS SCREEN - displayEmail:', displayEmail);
 
     return (
       <motion.div
@@ -272,7 +279,7 @@ function Register() {
             We've sent a verification email to:
           </p>
           <p className="text-lg font-semibold text-primary-600 mb-8">
-            {userEmail}
+            {displayEmail}
           </p>
         </div>
 
