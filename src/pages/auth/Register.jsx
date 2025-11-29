@@ -42,28 +42,36 @@ function Register() {
   // SessionStorage keys
   const REGISTRATION_SUCCESS_KEY = 'registration_success';
   const REGISTRATION_EMAIL_KEY = 'registration_email';
+  const REGISTRATION_TIMESTAMP_KEY = 'registration_timestamp';
+  const SESSION_EXPIRY_MS = 5 * 60 * 1000; // 5 minutes
 
   // On component mount, check if we should show success screen
   useEffect(() => {
     const savedSuccess = sessionStorage.getItem(REGISTRATION_SUCCESS_KEY);
     const savedEmail = sessionStorage.getItem(REGISTRATION_EMAIL_KEY);
+    const savedTimestamp = sessionStorage.getItem(REGISTRATION_TIMESTAMP_KEY);
 
-    console.log('📦 Checking sessionStorage - success:', savedSuccess, 'email:', savedEmail);
+    console.log('📦 Checking sessionStorage - success:', savedSuccess, 'email:', savedEmail, 'timestamp:', savedTimestamp);
 
-    if (savedSuccess === 'true' && savedEmail) {
-      console.log('✅ Restoring success state from sessionStorage');
-      setRegistrationSuccess(true);
-      setUserEmail(savedEmail);
+    if (savedSuccess === 'true' && savedEmail && savedTimestamp) {
+      const timestamp = parseInt(savedTimestamp, 10);
+      const now = Date.now();
+      const age = now - timestamp;
+
+      console.log('⏰ Session age:', age, 'ms (expires at', SESSION_EXPIRY_MS, 'ms)');
+
+      // Only restore if less than 5 minutes old
+      if (age < SESSION_EXPIRY_MS) {
+        console.log('✅ Restoring success state from sessionStorage');
+        setRegistrationSuccess(true);
+        setUserEmail(savedEmail);
+      } else {
+        console.log('⏰ Session expired, clearing stale data');
+        sessionStorage.removeItem(REGISTRATION_SUCCESS_KEY);
+        sessionStorage.removeItem(REGISTRATION_EMAIL_KEY);
+        sessionStorage.removeItem(REGISTRATION_TIMESTAMP_KEY);
+      }
     }
-  }, []);
-
-  // Cleanup: Clear sessionStorage when component unmounts or when navigating away
-  useEffect(() => {
-    return () => {
-      console.log('🧹 Cleaning up sessionStorage on unmount');
-      sessionStorage.removeItem(REGISTRATION_SUCCESS_KEY);
-      sessionStorage.removeItem(REGISTRATION_EMAIL_KEY);
-    };
   }, []);
 
   // Handle input changes
@@ -171,7 +179,8 @@ function Register() {
         // Save to sessionStorage to persist across re-renders
         sessionStorage.setItem(REGISTRATION_SUCCESS_KEY, 'true');
         sessionStorage.setItem(REGISTRATION_EMAIL_KEY, formData.email);
-        console.log('💾 Saved to sessionStorage');
+        sessionStorage.setItem(REGISTRATION_TIMESTAMP_KEY, Date.now().toString());
+        console.log('💾 Saved to sessionStorage with timestamp:', Date.now());
 
         // Show success state
         setRegistrationSuccess(true);
@@ -198,6 +207,8 @@ function Register() {
           // Clear sessionStorage before navigating
           sessionStorage.removeItem(REGISTRATION_SUCCESS_KEY);
           sessionStorage.removeItem(REGISTRATION_EMAIL_KEY);
+          sessionStorage.removeItem(REGISTRATION_TIMESTAMP_KEY);
+          console.log('🧹 Cleared sessionStorage before navigation');
           navigate('/login', { replace: true });
         }, 5000);
       } else {
@@ -294,6 +305,8 @@ function Register() {
               // Clear sessionStorage before navigating
               sessionStorage.removeItem(REGISTRATION_SUCCESS_KEY);
               sessionStorage.removeItem(REGISTRATION_EMAIL_KEY);
+              sessionStorage.removeItem(REGISTRATION_TIMESTAMP_KEY);
+              console.log('🧹 Cleared sessionStorage (manual navigation)');
               navigate('/login', { replace: true });
             }}
             className="btn-primary"
