@@ -112,7 +112,7 @@ function Register() {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -127,13 +127,16 @@ function Register() {
         role: formData.role,
       });
 
-      if (result.success) {
+      // Debug logging
+      console.log('📝 Registration result:', result);
+
+      if (result?.success) {
         // Store the email for the success message
         setUserEmail(formData.email);
-        
+
         // Show success state
         setRegistrationSuccess(true);
-        
+
         // Clear form and errors
         setFormData({
           name: '',
@@ -146,14 +149,22 @@ function Register() {
           phone: ''
         });
         clearError();
-        
+
         // Auto-redirect to login after 5 seconds
         setTimeout(() => {
           navigate('/login', { replace: true });
         }, 5000);
+      } else {
+        // Handle case where registration didn't succeed but didn't throw error
+        const errorMsg = result?.error || 'Registration failed. Please try again.';
+        console.error('❌ Registration failed:', errorMsg);
+        toast.error(errorMsg);
       }
     } catch (error) {
-      console.error('Registration error:', error);
+      // Handle unexpected errors
+      console.error('❌ Registration error:', error);
+      const errorMsg = error?.message || 'An unexpected error occurred. Please try again.';
+      toast.error(errorMsg);
     }
   };
 

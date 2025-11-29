@@ -91,36 +91,60 @@ const useAuthStore = create(
       // Register action
       register: async (userData) => {
         set({ isLoading: true, error: null });
-        
+
         try {
           const response = await api.register(userData);
-          
-          if (response.success) {
+
+          // Debug logging to see actual response structure
+          console.log('📝 Registration response:', response);
+
+          // More robust success detection
+          // Check multiple conditions: explicit success flag, presence of user data, or data object
+          const isSuccess = response?.success === true ||
+                           response?.data?.user ||
+                           response?.user ||
+                           (response && !response.error && !response.message?.toLowerCase().includes('fail'));
+
+          if (isSuccess) {
+            // Extract user data from various possible response structures
+            const userData = response?.data?.user || response?.user;
+            const needsVerification = response?.data?.needsEmailVerification ||
+                                     response?.needsEmailVerification ||
+                                     true;
+
             // After registration, user might need email verification
             set({
-              user: response.data.user,
+              user: userData,
               isAuthenticated: false, // Don't auto-login after registration
-              needsEmailVerification: response.data.needsEmailVerification || true,
+              needsEmailVerification: needsVerification,
               isLoading: false,
               error: null,
             });
 
-            return { success: true, data: response.data };
+            return {
+              success: true,
+              data: {
+                user: userData,
+                needsEmailVerification: needsVerification
+              }
+            };
           } else {
-            throw new Error(response.message || 'Registration failed');
+            throw new Error(response.message || response.error || 'Registration failed');
           }
         } catch (error) {
           let errorMessage = 'Registration failed';
-          
+
           // Handle different error types
           if (error.response?.data?.message) {
             errorMessage = error.response.data.message;
           } else if (error.message) {
             errorMessage = error.message;
           }
-          
-          set({ 
-            error: errorMessage, 
+
+          console.error('❌ Registration error:', errorMessage, error);
+
+          set({
+            error: errorMessage,
             isLoading: false,
             isAuthenticated: false,
             user: null,
